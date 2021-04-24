@@ -1,0 +1,29 @@
+if (!is_home())
+  - var banner_style = (typeof(page.bilibili_banner) != "undefined" && page.bilibili_banner!=null) ? page.bilibili_banner : theme.bilibili_banner.style
+  if (banner_style === 'autumn')
+    #autumnBanner
+      div
+        img(src='https://halo-blog-img.oss-cn-hangzhou.aliyuncs.com/BiliBiliBanner/autumn/bilibili-autumn-1.png')
+      div
+        img(src='https://halo-blog-img.oss-cn-hangzhou.aliyuncs.com/BiliBiliBanner/autumn/bilibili-autumn-2.png')
+      div
+        img(src='https://halo-blog-img.oss-cn-hangzhou.aliyuncs.com/BiliBiliBanner/autumn/bilibili-autumn-3.png')
+      div
+        img(src='https://halo-blog-img.oss-cn-hangzhou.aliyuncs.com/BiliBiliBanner/autumn/bilibili-autumn-4.png')
+      div
+        img(src='https://halo-blog-img.oss-cn-hangzhou.aliyuncs.com/BiliBiliBanner/autumn/bilibili-autumn-5.png')
+      div
+        img(src='https://halo-blog-img.oss-cn-hangzhou.aliyuncs.com/BiliBiliBanner/autumn/bilibili-autumn-6.png')
+  else if (banner_style === 'winter')
+    #winterBanner
+      .view
+        img.morning(src='https://halo-blog-img.oss-cn-hangzhou.aliyuncs.com/BiliBiliBanner/winter/bilibili-winter-view-1.png' alt='')
+        img.afternoon(src='https://halo-blog-img.oss-cn-hangzhou.aliyuncs.com/BiliBiliBanner/winter/bilibili-winter-view-2.png' alt='')
+        video.evening(autoplay='' loop='' muted='')
+          source(src='https://halo-blog-img.oss-cn-hangzhou.aliyuncs.com/BiliBiliBanner/winter/bilibili-winter-view-3.webm' type='video/webm')
+        img.window-cover(src='https://halo-blog-img.oss-cn-hangzhou.aliyuncs.com/BiliBiliBanner/winter/bilibili-winter-view-3-snow.png' alt='')
+      .tree
+        img.morning(src='https://halo-blog-img.oss-cn-hangzhou.aliyuncs.com/BiliBiliBanner/winter/bilibili-winter-tree-1.png' alt='')
+        img.afternoon(src='https://halo-blog-img.oss-cn-hangzhou.aliyuncs.com/BiliBiliBanner/winter/bilibili-winter-tree-2.png' alt='')
+        img.evening(src='https://halo-blog-img.oss-cn-hangzhou.aliyuncs.com/BiliBiliBanner/winter/bilibili-winter-tree-3.png' alt='')        
+  script(async data-pjax src=url_for(theme.CDN.bilibili_banner))
