@@ -1,19 +1,75 @@
 #content-inner {
-    --light_bg_color: hsla(0, 0%, 100%, 0.6);
-    --dark_bg_color: rgba(18, 18, 18, 0.8);
-    --light_page_color: hsla(0, 0%, 100%, 0.5);
-    --dark_page_color: rgba(18, 18, 18, 0.8)
+    --light_bg_color: hsla(0, 0%, 100%, 0.82);
+    --dark_bg_color: rgba(18, 18, 18, 0.82);
+    --light_page_color: hsla(0, 0%, 100%, 0.82);
+    --dark_page_color: rgba(18, 18, 18, 0.82)
 }
+
+/* #body-wrap {
+    background: linear-gradient(90deg,rgba(247,149,51,.1),rgba(243,112,85,.1) 15%,rgba(239,78,123,.1) 30%,rgba(161,102,171,.1) 44%,rgba(80,115,184,.1) 58%,rgba(16,152,173,.1) 72%,rgba(7,179,155,.1) 86%,rgba(109,186,130,.1))
+} */
+
+.card-info-data-item.is-center{
+    
+}
+
+/*Follow Me*/
+.button--animated:before {
+    border-radius: 0.8em;
+}
+
+/*分类卡片*/
+
+#aside-content .card-archives ul.card-archive-list > .card-archive-list-item a:hover, #aside-content .card-categories ul.card-category-list > .card-category-list-item a:hover {
+    padding: 0.15rem 0.85rem;
+    background-color: #475dd6bb;
+    border-radius: 8px!important;
+    color: var(--light_bg_color);
+}
+
+/*换页*/
+
+#pagination .pagination {
+    height: 2rem;
+}
+.extend.prev{
+    float: left;
+}
+
+.extend.next {
+    float: right;
+}
+
+#pagination a.extend.next, #pagination a.extend.prev {
+    width: 4rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 8px!important;
+    background: var(--light_bg_color);
+}
+
 
 #pagination .page-number{
     font-size: 0.8rem;
     width: 2rem;
-    margin: 0.6rem!important;
-    background: #e0e0e0;
+    margin-left: 0.8rem;
+    background: var(--light_bg_color);
     height: 2rem;
     line-height: calc(2rem - 2px);
     border-radius: 8px!important;  
 }
+
+#pagination a.extend.next:hover, #pagination a.extend.prev:hover, #pagination .page-number:hover{
+    color: var(--light_bg_color);
+    background: #425AEF!important;
+}
+
+
+/*背景色*/
+#body-wrap {
+    background: linear-gradient(90deg,rgba(93, 51, 247, 0.1),rgba(85, 180, 243, 0.1) 15%,rgba(239,78,123,.1) 30%,rgba(171, 139, 102, 0.1) 44%,rgba(80,115,184,.1) 58%,rgba(16,152,173,.1) 72%,rgba(7, 125, 179, 0.1) 86%,rgba(109, 186, 129, 0.164))
+}
+
 
 #aside-content .aside-list>.aside-list-item .content>.comment, #aside-content .aside-list>.aside-list-item .content>.name, #aside-content .aside-list>.aside-list-item .content>.title, #error-wrap .error-content .error-info .error_subtitle, #post-info .post-title, #recent-posts>.recent-post-item>.recent-post-info>.article-title, #recent-posts>.recent-post-item>.recent-post-info>.content, .article-sort-item-title, .limit-more-line, .relatedPosts>.relatedPosts-list .content .title, figure.gallery-group .gallery-group-name, figure.gallery-group p {
     display: -webkit-box;
@@ -46,7 +102,7 @@
     max-width: 1200px;
 }
 
-/*主页卡片宽度*/
+/*主页卡片高度*/
 #recent-posts>.post-card-large {
     height: 15em!important;
 }
@@ -59,14 +115,15 @@
 #recent-posts > .recent-post-item > .recent-post-info{
     display: inline-block;
     overflow: hidden;
-    padding: 0px 40px;
+    /* padding: 0px 40px; */
     width: 55%;
 }
 
+/*主页卡片标题*/
 #recent-posts>.recent-post-item>.recent-post-info>.article-title{
     font-weight: 700;
     line-height: 1.6;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     font-size: 1.4rem;
     margin-bottom: 0.3rem;
     transition: all 0.2s ease-in-out 0s;
@@ -101,10 +158,10 @@ hr::before{
 
 /*每日小结中的details*/
 
-details p {
+/* details p {
     font-size: 0.8rem;
     line-height: 1.4rem;
-}
+} */
 
 /*表格滚动条*/
 .table-wrap{
@@ -204,9 +261,6 @@ audio {
     outline: none
 }
 
-#web_bg {
-    background: linear-gradient(90deg, rgba(247, 149, 51, .1), rgba(243, 112, 85, .1) 15%, rgba(239, 78, 123, .1) 30%, rgba(161, 102, 171, .1) 44%, rgba(80, 115, 184, .1) 58%, rgba(16, 152, 173, .1) 72%, rgba(7, 179, 155, .1) 86%, rgba(109, 186, 130, .1))
-}
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -1918,9 +1972,9 @@ div.snote.danger:before, div.snote.error:before {
     box-shadow: 0 0 0 2.5px #f7f8f9
 }
 
-.card-info-avatar:hover {
+/* .card-info-avatar:hover {
     background: url(https://ae01.alicdn.com/kf/H3342af90d24b4d62b9bbfec9688ccc25M.gif)
-}
+} */
 
 #aside-content .card-widget {
     background: var(--light_bg_color)

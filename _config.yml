@@ -103,7 +103,7 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: https://halo-blog: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@github.com/halo-blog/halo-blog.github.io.git
+  repo: https://halo-blog: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@github.com/halo-blog/halo-blog.github.io.git
   branch: main
 
 # Markdown-it config
