@@ -9,8 +9,16 @@
     background: linear-gradient(90deg,rgba(247,149,51,.1),rgba(243,112,85,.1) 15%,rgba(239,78,123,.1) 30%,rgba(161,102,171,.1) 44%,rgba(80,115,184,.1) 58%,rgba(16,152,173,.1) 72%,rgba(7,179,155,.1) 86%,rgba(109,186,130,.1))
 } */
 
-.card-info-data-item.is-center{
-    
+
+/* 折叠框下的li */
+#article-container.post-content ul > li:not(.tab):before {
+    top: 0.49em
+}
+
+
+/* 内代码圆角 */
+#article-container code {
+    border-radius: 5px;
 }
 
 /*Follow Me*/
@@ -1127,7 +1135,7 @@ details {
     padding: 16px;
     margin: .5rem 0;
     border-radius: 4px;
-    font-size: .7375rem;
+    font-size: 1em;
     transition: all .28s ease;
     -moz-transition: all .28s ease;
     -webkit-transition: all .28s ease;

@@ -857,8 +857,8 @@ inject:
     # - <link rel="stylesheet" href="/xxx.css">
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/bilibili-banner.min.css"  media="defer" onload="this.media='screen'">
-    - <link rel="stylesheet" href="/css/butterfly.css">
-    # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterfly.min.css"  media="defer" onload="this.media='screen'">
+    # - <link rel="stylesheet" href="/css/butterfly.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterfly.css"  media="defer" onload="this.media='screen'">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css"  media="defer" onload="this.media='all'">  #动画标签anima的依赖
   bottom:
     # - <script src="xxxx"></script>
