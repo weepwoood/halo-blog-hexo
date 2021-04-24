@@ -103,8 +103,8 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: https://lanqilu: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@github.com/Lanqilu/lanqilu.github.io.git
-  branch: butterfly
+  repo: https://halo-blog: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@github.com/halo-blog/halo-blog.github.io.git
+  branch: main
 
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
