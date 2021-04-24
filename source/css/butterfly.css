@@ -5,6 +5,83 @@
     --dark_page_color: rgba(18, 18, 18, 0.8)
 }
 
+#pagination .page-number{
+    font-size: 0.8rem;
+    width: 2rem;
+    margin: 0.6rem!important;
+    background: #e0e0e0;
+    height: 2rem;
+    line-height: calc(2rem - 2px);
+    border-radius: 8px!important;  
+}
+
+#aside-content .aside-list>.aside-list-item .content>.comment, #aside-content .aside-list>.aside-list-item .content>.name, #aside-content .aside-list>.aside-list-item .content>.title, #error-wrap .error-content .error-info .error_subtitle, #post-info .post-title, #recent-posts>.recent-post-item>.recent-post-info>.article-title, #recent-posts>.recent-post-item>.recent-post-info>.content, .article-sort-item-title, .limit-more-line, .relatedPosts>.relatedPosts-list .content .title, figure.gallery-group .gallery-group-name, figure.gallery-group p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+
+#recent-posts>.recent-post-item>.recent-post-info>.article-title {
+    margin-bottom: .3rem;
+    color: var(--text-highlight-color);
+    font-size: 1.4em;
+    line-height: 1.4;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-line-clamp: 2;
+}
+
+.layout {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    margin: 0 auto;
+    padding: 2rem 15px;
+    max-width: 1200px;
+}
+
+/*主页卡片宽度*/
+#recent-posts>.post-card-large {
+    height: 15em!important;
+}
+  
+#recent-posts > .post-card-large >.recent-post-info > .content{
+    -webkit-line-clamp: 5!important;
+}
+
+
+#recent-posts > .recent-post-item > .recent-post-info{
+    display: inline-block;
+    overflow: hidden;
+    padding: 0px 40px;
+    width: 55%;
+}
+
+#recent-posts>.recent-post-item>.recent-post-info>.article-title{
+    font-weight: 700;
+    line-height: 1.6;
+    -webkit-line-clamp: 2;
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+#recent-posts > .recent-post-item >.recent-post-info > .content{
+    -webkit-line-clamp: 2!important;
+    color: rgba(141, 140, 140, 0.856);
+    font-size: 0.7rem;
+}
+
+/*链接卡片图片不修改margin*/
+#article-container .fancybox img{
+    margin: 0px!important;
+}
 
 /*搜索框*/
 #local-search .search-dialog {
@@ -88,10 +165,9 @@ ol.toc {
 }
 
 /*目录宽度*/
-#aside-content .card-widget{
+/* #aside-content .card-widget{
     width: 18rem;
-    /* bottom: 3rem; */
-}
+} */
 
 /*代码边框*/
 #article-container figure.highlight, #article-container pre[class*=language-] {

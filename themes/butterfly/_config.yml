@@ -170,8 +170,8 @@ wordcount:
 # 3: auto_excerpt (default)
 # false: do not show the article introduction
 index_post_content:
-  method: 3
-  length: 500 # if you set method to 2 or 3, the length need to config
+  method: 2
+  length: 300 # if you set method to 2 or 3, the length need to config
 
 # Post
 # --------------------------------------
@@ -649,7 +649,7 @@ aside:
       text: Follow Me
       link: https://github.com/lanqilu
   card_announcement:
-    enable: true
+    enable: false
     content: 试运行
   card_recent_post:
     enable: false
@@ -856,9 +856,9 @@ inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanqilu/BlogResources@0.0.13/bilibili/bilibiliBanner.css"  media="defer" onload="this.media='screen'">
-    # - <link rel="stylesheet" href="/css/butterfly.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanqilu/BlogResources@0.0.13/butterfly.css"  media="defer" onload="this.media='screen'">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/bilibili-banner.min.css"  media="defer" onload="this.media='screen'">
+    - <link rel="stylesheet" href="/css/butterfly.css">
+    # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterfly.min.css"  media="defer" onload="this.media='screen'">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css"  media="defer" onload="this.media='all'">  #动画标签anima的依赖
   bottom:
     # - <script src="xxxx"></script>
@@ -876,7 +876,7 @@ CDN:
   jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
   main: /js/main.js
   utils: /js/utils.js
-  bilibili_banner: https://cdn.jsdelivr.net/gh/lanqilu/BlogResources@0.0.13/bilibili/bilibili-banner.js
+  bilibili_banner: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/js/bilibiliBanner.min.js
 
   # pjax
   pjax: https://cdn.jsdelivr.net/npm/pjax/pjax.min.js
