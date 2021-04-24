@@ -94,7 +94,7 @@ disable_top_img: false
 
 # The banner image of home page
 # index_img: false
-index_img: https://img.imgdb.cn/item/5fc129d415e771908483c0d5.jpg
+index_img: false
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: https://img.imgdb.cn/item/5db3aa698b58bc7bf718ed1c.png
@@ -496,7 +496,7 @@ theme_color:
 # The position of site info, eg: 300px/300em/300rem/10% (主頁標題距離頂部距離)
 index_site_info_top:
 # The height of top_img, eg: 300px/300em/300rem (主頁top_img高度)
-index_top_img_height: 400px
+index_top_img_height: 180px
 
 # The user interface setting of category and tag page (category和tag頁的UI設置)
 # index - same as Homepage UI (index 值代表 UI將與首頁的UI一樣)
@@ -858,7 +858,7 @@ inject:
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/bilibili-banner.min.css"  media="defer" onload="this.media='screen'">
     # - <link rel="stylesheet" href="/css/butterfly.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterfly.min.css"  media="defer" onload="this.media='screen'">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterfly.css"  media="defer" onload="this.media='screen'">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css"  media="defer" onload="this.media='all'">  #动画标签anima的依赖
   bottom:
     # - <script src="xxxx"></script>
