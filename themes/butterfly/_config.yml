@@ -11,7 +11,7 @@ menu:
   Archives: /archives/ || fas fa-archive
   Tags: /tags/ || fas fa-tags
   Categories: /categories/ || fas fa-folder-open
-  Message: /message/ || fas fa-folder-open
+  Message: /message/ || fas fa-envelope
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
@@ -19,7 +19,7 @@ menu:
   # About: /about/ || fas fa-heart
 
 # Hide the child menu items in mobile sidebar
-hide_sidebar_menu_child: false
+hide_sidebar_menu_child: true
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -130,7 +130,8 @@ cover:
   position: both
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover: 
-    - https://img.imgdb.cn/item/5fc1285715e771908483588b.jpg
+    - https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/137f30002b2fd221da0e9.jpg
+    - https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/2020-09-10-19-33-02-720.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -858,7 +859,7 @@ inject:
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/bilibili-banner.min.css"  media="defer" onload="this.media='screen'">
     # - <link rel="stylesheet" href="/css/butterfly.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterfly.css"  media="defer" onload="this.media='screen'">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterflymin.css"  media="defer" onload="this.media='screen'">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css"  media="defer" onload="this.media='all'">  #动画标签anima的依赖
   bottom:
     # - <script src="xxxx"></script>
@@ -877,10 +878,13 @@ inject:
 # 非必要請不要修改
 CDN:
   # main
-  main_css: /css/index.css
+  # main_css: /css/index.css
+  main_css: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterflyindex.css
   jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
-  main: /js/main.js
-  utils: /js/utils.js
+  # main: /js/main.js
+  main: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/js/butterflymain.js
+  # utils: /js/utils.js
+  utils: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/js/butterflyutils.js
   bilibili_banner: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/js/bilibiliBanner.min.js
 
   # pjax
