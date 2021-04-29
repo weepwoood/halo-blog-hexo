@@ -1,9 +1,9 @@
 ---
 title: C语言学习笔记
 tags:
-  - C语言
+  - C
 categories:
-  - [C语言]
+  - C\C++
 date: 2020-05-25 23:06:36
 ---
 

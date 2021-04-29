@@ -3,7 +3,7 @@ title: Java多线程
 tags:
   - Java
 categories:
-  - [Java, 多线程]
+  - Java
 date: 2020-04-06 22:05:45
 
 ---

@@ -4,7 +4,7 @@ tags:
   - Django
   - Python
 categories:
-  - [Python, Django]
+  - Django
 date: 2020-04-06 19:30:08
 ---
 

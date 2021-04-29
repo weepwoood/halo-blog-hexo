@@ -4,7 +4,6 @@ tags:
   - Redis
 categories:
   - Redis
-  - 数据库
 date: 2020-07-10 16:47:25
 ---
 

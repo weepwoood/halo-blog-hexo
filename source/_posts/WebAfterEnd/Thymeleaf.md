@@ -4,7 +4,7 @@ date: 2020-10-29 17:59:02
 tags:
 - Thymeleaf
 categories:
-- JavaEE
+- Java
 summary: Thymeleaf是一个Java XML / XHTML / HTML5 模板引擎 ，可以在Web（基于servlet ）和非Web环境中工作。 它更适合在基于MVC的Web应用程序的视图层提供XHTML / HTML5，但它甚至可以在脱机环境中处理任何XML文件。 它提供完整的Spring Framework。
 ---
 

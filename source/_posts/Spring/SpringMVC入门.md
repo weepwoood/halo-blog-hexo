@@ -4,7 +4,7 @@ date: 2020-11-03 23:42:02
 tags:
 - SpringMVC
 categories:
-- Java框架
+- Spring
 summary: 快速搭建一个SpringMVC项目
 ---
 

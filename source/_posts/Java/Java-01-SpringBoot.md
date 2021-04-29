@@ -1,10 +1,10 @@
 ---
-title: SpringBoot2
+title: SpringBoot
 date: 2020-10-29 17:59:02
 tags:
 - SpringBoot
 categories:
-- Java框架
+- Spring
 ---
 
 

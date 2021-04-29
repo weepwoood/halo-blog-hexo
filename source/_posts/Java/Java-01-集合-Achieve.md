@@ -3,7 +3,7 @@ title: Java集合
 tags:
   - Java
 categories:
-  - Java中级
+  - Java
 date: 2020-10-12 14:12:54
 ---
 
