@@ -4,14 +4,14 @@ date: 2021-04-26 15:00:51
 comments: true
 description: 各种学习资源整理
 keywords: 学习资源
-top_img: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/704736.jpg # 页面顶部图片
-cover: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/704736.jpg # 页面缩略图
+# top_img: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/704736.jpg # 页面顶部图片
+# cover: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/704736.jpg # 页面缩略图
 toc_number: true
 mathjax: false
 aside: true
 highlight_shrink: true # 代码框是否展开
 large: true
-bilibili_banner: false # autumn 、winter
+bilibili_banner: winter # autumn 、winter
 ---
 
 ## 学习计划
@@ -20,6 +20,8 @@ bilibili_banner: false # autumn 、winter
 
 [前端学习路线](https://www.processon.com/view/link/60867464e401fd06e0b00d5e)
 [Java后端学习路线](https://www.processon.com/view/link/608677c85653bb2fcf8b46e3)
+[开发者路线图](https://github.com/kamranahmedse/developer-roadmap)
+[前端开发者路线图翻译](https://zhuanlan.zhihu.com/p/339835359)
 
 
 ### 课程学习

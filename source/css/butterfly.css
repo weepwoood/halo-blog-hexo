@@ -2,8 +2,56 @@
     --light_bg_color: hsla(0, 0%, 100%, 0.82);
     --dark_bg_color: rgba(18, 18, 18, 0.82);
     --light_page_color: hsla(0, 0%, 100%, 0.82);
-    --dark_page_color: rgba(18, 18, 18, 0.82)
+    --dark_page_color: rgba(18, 18, 18, 0.82);
+    --dark_font_color_my: rgba(255,255,255,0.7);
 }
+
+/* 隐藏分享 */
+.tag_share {
+    display: none;
+}
+
+/* 黑暗模式下外置标签样式 */
+[data-theme=dark] #post wavy {
+    color: var(--dark_font_color_my);
+}
+
+[data-theme=dark] #post emp {
+    color: var(--dark_font_color_my);
+}
+
+[data-theme=dark] #post u {
+    color: var(--dark_font_color_my);
+}
+
+[data-theme=dark] #post del {
+    color: var(--dark_font_color_my);
+}
+
+[data-theme=dark] #post psw:hover {
+    color: var(--dark_font_color_my);
+}
+
+
+/* 音频卡片位置 */
+.audio {
+    text-align: center;
+}
+
+/* codepen */
+/* body#the-body {
+    border-radius: 8px;
+} */
+
+/* #tabs pre {
+    font-size:16px!important;
+} */
+
+/* 链接卡片居中 */
+.tag.link {
+    text-align: center;    
+}
+
 
 /* sidebar */
 #sidebar #sidebar-menus {
@@ -600,9 +648,9 @@ audio {
     width: 100%
 }
 
-@media screen and (max-width:768px) {
-    width: 100%
-}
+/* @media screen and (max-width:768px) {
+    width: 100%;
+} */
 
 #recent-posts>.recent-post-item, .layout>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post {
     background: var(--light_page_color)
@@ -695,6 +743,8 @@ p.top {
     border-top-color: var(--Color)
 }
 
+
+/* 修改卡片宽度为70% */
 #post a.link-card {
     text-decoration: none;
     margin: .2rem auto;
@@ -706,11 +756,19 @@ p.top {
     cursor: pointer;
     text-align: left;
     font-size: .575rem;
-    min-width: 200px;
-    max-width: 361px;
+    min-width: 70%;
+    max-width: 70%;
     color: var(--tab-botton-color);
     border-radius: 8px
 }
+
+@media screen and (max-device-width: 768px){
+    #post a.link-card {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
 
 #post a.link-card:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1)

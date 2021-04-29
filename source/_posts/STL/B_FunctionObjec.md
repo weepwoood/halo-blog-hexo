@@ -11,16 +11,16 @@ tags: STL
 
 ### 函数对象概念
 
-**概念：**
+**概念**：
 
 - 重载**函数调用操作符**的类，其对象常称为**函数对象**
 - **函数对象**使用重载的()时，行为类似函数调用，也叫**仿函数**
 
-**本质：**函数对象(仿函数)是一个**类**，不是一个函数
+**本质**：函数对象(仿函数)是一个**类**，不是一个函数
 
 ### 函数对象使用
 
-**特点：**
+**特点**：
 
 - 函数对象在使用时，可以像普通函数那样调用, 可以有参数，可以有返回值
 - 函数对象超出普通函数的概念，函数对象可以有自己的状态
@@ -93,7 +93,7 @@ int main() {
 
 ### 谓词概念
 
-**概念：**
+**概念**：
 
 - 返回bool类型的仿函数称为**谓词**
 - 如果operator()接受一个参数，那么叫做一元谓词
@@ -193,7 +193,7 @@ int main() {
 
 ### 内建函数对象意义
 
-**概念：**
+**概念**：
 
 - STL内建了一些函数对象
 
@@ -203,19 +203,19 @@ int main() {
 - 关系仿函数
 - 逻辑仿函数
 
-**用法：**
+**用法**：
 
 - 这些仿函数所产生的对象，用法和一般函数完全相同
 - 使用内建函数对象，需要引入头文件 `#include<functional>`
 
 ### 算术仿函数
 
-**功能描述：**
+**功能描述**：
 
 - 实现四则运算
 - 其中negate是一元运算，其他都是二元运算
 
-**仿函数原型：**
+**仿函数原型**：
 
 - `template<class T> T plus<T>` //加法仿函数
 - `template<class T> T minus<T>` //减法仿函数
@@ -224,7 +224,7 @@ int main() {
 - `template<class T> T modulus<T>` //取模仿函数
 - `template<class T> T negate<T>` //取反仿函数
 
-**示例：**
+**示例**：
 
 ```c++
 #include <iostream>
@@ -256,11 +256,11 @@ int main() {
 
 ### 关系仿函数
 
-**功能描述：**
+**功能描述**：
 
 - 实现关系对比
 
-**仿函数原型：**
+**仿函数原型**：
 
 - `template<class T> bool equal_to<T>` //等于
 - `template<class T> bool not_equal_to<T>` //不等于
@@ -269,7 +269,7 @@ int main() {
 - `template<class T> bool less<T>` //小于
 - `template<class T> bool less_equal<T>` //小于等于
 
-**示例：**
+**示例**：
 
 ```c++
 #include <iostream>
@@ -320,17 +320,17 @@ int main() {
 
 ### 逻辑仿函数
 
-**功能描述：**
+**功能描述**：
 
 - 实现逻辑运算
 
-**函数原型：**
+**函数原型**：
 
 - `template<class T> bool logical_and<T>` //逻辑与
 - `template<class T> bool logical_or<T>` //逻辑或
 - `template<class T> bool logical_not<T>` //逻辑非
 
-**示例：**
+**示例**：
 
 ```c++
 #include <iostream>

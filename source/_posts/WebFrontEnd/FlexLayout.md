@@ -16,14 +16,9 @@ large: true
 
 
 {% folding 参考文章 %}
-<table style="text-align:center;">
-  <tr>
-    <td style="border:0;">{% link Flex布局语法教程——阮一峰, https://www.runoob.com/w3cnote/flex-grammar.html, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/%E7%BD%91%E7%AB%99.svg %}</td>
-  </tr>
-  <tr>
-    <td style="border:0;">{% link flex 布局的基本概念——MDN教程, https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/%E7%BD%91%E7%AB%99.svg %}</td>
-  </tr>
-</table>
+
+{% link Flex布局语法教程——阮一峰, https://www.runoob.com/w3cnote/flex-grammar.html, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/%E7%BD%91%E7%AB%99.svg %}
+{% link flex 布局的基本概念——MDN教程, https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/%E7%BD%91%E7%AB%99.svg %}
 
 {% endfolding %}
 

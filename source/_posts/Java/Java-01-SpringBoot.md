@@ -8,13 +8,6 @@ categories:
 ---
 
 
-
-
-
-
-
-
-
 ## SpringBoot实现RESTful风格Web应用
 
 REST（REpresentational State Transfer）全称是 Resource Representational State Transfer：通俗来讲就是：资源在网络中以某种表现形式进行状态转移。分解开来：

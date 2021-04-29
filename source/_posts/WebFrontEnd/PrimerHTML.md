@@ -6,10 +6,14 @@ categories: Web前端
 tags: HTML
 ---
 
-参考资料：
-+ [Web前端入门教程](https://www.bilibili.com/video/BV1pE411q7FU)
-+ [W3CSchool](http://www.w3school.com.cn/)
-+ [MDN](https://developer.mozilla.org) 
+
+{% folding 参考资料 %}
+
+{% link Web前端入门教程, https://www.bilibili.com/video/BV1pE411q7FU, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/%E7%BD%91%E7%AB%99.svg %}
+{% link W3CSchool, http://www.w3school.com.cn/, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/%E7%BD%91%E7%AB%99.svg %}
+{% link MDN, https://developer.mozilla.org, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/%E7%BD%91%E7%AB%99.svg %}
+
+{% endfolding %}
 
 ## 概念
 

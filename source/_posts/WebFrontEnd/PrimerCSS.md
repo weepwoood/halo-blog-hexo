@@ -5,8 +5,13 @@ categories: Web前端
 tags: CSS
 ---
 
-参考资料：
-+ [CSS参考手册](http://css.doyoe.com/)
+{% folding 参考资料 %}
+
+{% link CSS参考手册, http://css.doyoe.com/, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/%E7%BD%91%E7%AB%99.svg %}
+{% link w3cschool, https://www.w3school.com.cn/, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/%E7%BD%91%E7%AB%99.svg %}
+{% link 黑马程序员Web前端入门教程, https://www.bilibili.com/video/BV1pE411q7FU, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/%E7%BD%91%E7%AB%99.svg %}
+
+{% endfolding %}
 
 ## CSS 简介
 
@@ -216,11 +221,11 @@ id 选择器和类选择器的区别：
 | id选择器     | 一次只能选择1个标签     | 相同id属性只能在每一个HTML文档中出现一次 | 一般和JavaScript搭配 | `#nav {color: red;}` |
 | 通配符选择器 | 选择所有的标签          | 选择所有                                 | 特殊情况下使用       | `* {color: red;}`    |
 
-## 关系选择器
+### 关系选择器
 
 简单的选择器包括标签选择器、类选择器、ID 选择器和通配符选择器。如果把两个选择器组合在一起，就形成了一个复杂关系的选择器。在 HTML5 文档结构中，通过关系选择器可以精确匹配结构中特定关系元素。
 
-### 包含选择器
+#### 包含选择器
 
 包含选择器通过空格连接两个选择器，前面选择器表示包含的祖先元素，后面选择器表示被包含的后代元素。
 
@@ -249,15 +254,27 @@ footer h1{font-size:12px;}
 ```
 
 
-### 子选择器
+#### 子选择器
 
 子选择器使用尖括号（`>`）连接两个选择器，前面选择器表示要匹配的父元素，后面选择器表示被包含的匹配子对象。
 
 + 优点：比包含选择器匹配的范围更小，从层级结构上来看匹配目标更明确。
-+ 
++ 缺点：与包含选择器相比，匹配范围优先，用户需要熟悉文档结构。
 
+<iframe width="100%" height="300" src="//jsrun.net/9e3Kp/embedded/html,css,result/dark" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
+#### 相邻选择器
 
+相邻选择器使用加号（`+`）连接两个选择器，前面选择器匹配特定元素，后面选择器根据结构关系，指定同级、相邻的匹配元素。
+
++ 优点：在结构中能够准确找到同级、相邻的元素。
++ 缺点：需要熟悉文档结构。
+
+#### 兄弟选择器
+
+兄弟选择器使用波浪线（`~`）连接两个选择器，前面
+
+<iframe height="400" style="width: 100%;" scrolling="no" title="Swiper.js实现响应式博客卡片滑块轮播" src="https://animpen.com/embed/oMbZtH?tab=rlt,html" frameborder="no"  allowtransparency="true" allowfullscreen="true"></iframe>
 
 ## CSS字体属性
 
