@@ -857,7 +857,8 @@ inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/bilibili-banner.min.css"  media="defer" onload="this.media='screen'">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/bilibili-banner.css"  media="defer" onload="this.media='screen'">
+    # - <link rel="stylesheet" href="/css/bilibiliBanner.css"  media="defer" onload="this.media='screen'">
     - <link rel="stylesheet" href="/css/butterfly.css">
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterflymin.css"  media="defer" onload="this.media='screen'">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css"  media="defer" onload="this.media='all'">  #动画标签anima的依赖
@@ -886,7 +887,8 @@ CDN:
   main: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/js/butterflymain.js
   # utils: /js/utils.js
   utils: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/js/butterflyutils.js
-  bilibili_banner: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/js/bilibiliBanner.min.js
+  bilibili_banner: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/js/bilibiliBanner.js
+  # bilibili_banner: /js/bilibili-banner.js
 
   # pjax
   pjax: https://cdn.jsdelivr.net/npm/pjax/pjax.min.js

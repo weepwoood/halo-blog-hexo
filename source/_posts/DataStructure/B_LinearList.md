@@ -10,7 +10,7 @@ toc_number: true
 mathjax: true
 aside: true
 large: true
-bilibili_banner: true
+bilibili_banner: spring
 ---
 
 【考纲内容】
