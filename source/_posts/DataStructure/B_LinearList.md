@@ -82,7 +82,7 @@ bilibili_banner: true
 typedef struct{
     ElemType data[MaxSize];    // 顺序表的元素
     int length;                // 顺序表的当前长度
-} StaticSqList;                      // 顺序表的类型定义 Sq:sequence
+} StaticSqList;                // 顺序表的类型定义 Sq:sequence
 ```
 
 一维数组可以是静态分配的，也可以是动态分配的。在静态分配时，由于数组的大小和空间事先已经固定，一旦空间占满，再加入新的数据将会产生溢出，进而导致程序崩溃。
@@ -91,14 +91,14 @@ typedef struct{
 // 初始化一个顺序表
 void InitList(StaticSqList &L) {
     for (int i = 0; i < Maxsize; i++) {
-        L.data[i] = 0;   // 将所有数据元素设置默认值(可省略)
+        L.data[i] = 0;  // 将所有数据元素设置默认值(可省略)
     }
-    L.length = 0;        // 顺序表初始长度为0
+    L.length = 0;       // 顺序表初始长度为0
 }
 
 int main(){
-    StaticSqList L;    // 声明一个顺序表
-    InitList(L); // 初始化顺序表
+    StaticSqList L;     // 声明一个顺序表
+    InitList(L);        // 初始化顺序表
     // ...  相关操作
     return 0;
 }
@@ -111,9 +111,9 @@ int main(){
 ```c++
 #define InitSize 10           // 表长度的初始定义
 typedef struct{
-    ElemType *data;            // 指示动态分配数组的指针
-    int MaxSize,length;        // 数组的最大容量和当前个数
-} DynamicSqList;                      // 动态分配数组顺序表的类型定义 
+    ElemType *data;           // 指示动态分配数组的指针
+    int MaxSize,length;       // 数组的最大容量和当前个数
+} DynamicSqList;              // 动态分配数组顺序表的类型定义 
 ```
 
 C 的初始动态分配语句为：`L.data = (ElemType*)malloc(sizeof(ElemType) * InitSize);`
@@ -151,7 +151,7 @@ void IncreaseSize(DynamicSqList &L, int len) {
 
 int main(){
     DynamicSqList L;     // 声明一个顺序表
-    InitList(L);   // 初始化顺序表
+    InitList(L);         // 初始化顺序表
     // ... 插入操作
     IncreaseSize(L,5);
     return 0;
@@ -169,7 +169,7 @@ int main(){
 
 #### 插入操作
 
-在顺序表 L 的第 i （1≤i≤L. length+1）个位置插入新元素 e。
+在顺序表 L 的第 i（1≤i≤`L.length+1`）个位置插入新元素 e。
 
 + 若 i 的输入不合法，则返回 false，表示插入失败；
 + 否则，将顺序表的第 i 个元素及其后的所有元素右移一个位置，腾出一个空位置插入新元素 element，顺序表长度增加 1，插入成功，返回 true。
@@ -211,7 +211,7 @@ $$\sum_{i=1}^{n+1}p_{i}\left(n-i+1\right) = \sum_{i=1}^{n+1}\frac{1}{n+1}\left(n
 
 #### 删除操作
 
-删除顺序表 L 中第 i （1≤i≤L. length+1）个位置的元素，若成功则返回 true，并将被删除的元素用引用变量 element 返回，否则返回 false。
+删除顺序表 L 中第 i（1≤i≤`L.length+1`）个位置的元素，若成功则返回 true，并将被删除的元素用引用变量 element 返回，否则返回 false。
 
 ```c++
 /**
@@ -648,7 +648,7 @@ bool InertNextDNode(DNode *p, DNode *s) {
 }
 ```
 
-上述代码的语句顺序不是唯一的， 但也不是任意的，① 和 ② 两步必须在 ④ 步之前，否则`*p `的后继结点的指针就会丢掉，导致插入失败。 
+上述代码的语句顺序不是唯一的， 但也不是任意的，① 和 ② 两步必须在 ④ 步之前，否则 `*p` 的后继结点的指针就会丢掉，导致插入失败。 
 
 #### 双链表的删除
 
