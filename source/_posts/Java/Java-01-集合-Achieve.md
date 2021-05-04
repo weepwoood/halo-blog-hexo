@@ -169,7 +169,7 @@ List<Apple> apples = new ArrayList<>();
 
 请注意， **ArrayList** 已经被向上转型为了 **List** ，这与之前示例中的处理方式正好相反。使用接口的目的是，如果想要改变具体实现，只需在创建时修改它就行了，就像下面这样：
 
-TODO ： 暂不理解“使用接口的目的是，如果想要改变具体实现，只需在创建时修改它就行了”这句话的意义。2020年10月12日
+TODO 暂不理解“使用接口的目的是，如果想要改变具体实现，只需在创建时修改它就行了”这句话的意义。2020年10月12日
 
 ```java
 List<Apple> apples = new LinkedList<>();
@@ -203,13 +203,13 @@ public class SimpleCollection {
 
 `add()` 方法的名称就表明它是在 **Collection** 中添加一个新元素。但是，文档中非常详细地叙述到 `add()` “要确保这个 **Collection** 包含指定的元素。”这是因为考虑到了 **Set** 的含义，因为在 **Set**中，只有当元素不存在时才会添加元素。在使用 **ArrayList** ，或任何其他类型的 **List** 时，`add()` 总是表示“把它放进去”，因为 **List** 不关心是否存在重复元素。
 
-TODO ：不理解“要确保这个 **Collection** 包含指定的元素。”的必要。2020年10月12日
+TODO 不理解“要确保这个 **Collection** 包含指定的元素。”的必要。2020年10月12日
 
 可以使用 *for-in* 语法来遍历所有的 **Collection** ，就像这里所展示的那样。在本章的后续部分，还将学习到一个更灵活的概念，*迭代器*。
 
 ## 添加元素组
 
-TODO ：此小节不理解。2020年10月12日
+TODO 此小节不理解。2020年10月12日
 
 在 **java.util** 包中的 **Arrays** 和 **Collections** 类中都有很多实用的方法，可以在一个 **Collection** 中添加一组元素。
 
@@ -357,7 +357,7 @@ public class PrintingCollections {
 - 基本的 **ArrayList** ，擅长随机访问元素，但在 **List** 中间插入和删除元素时速度较慢。
 - **LinkedList** ，它通过代价较低的在 **List** 中间进行的插入和删除操作，提供了优化的顺序访问。 **LinkedList** 对于随机访问来说相对较慢，但它具有比 **ArrayList** 更大的特征集。
 
-TODO ：特征集？2020年10月12日
+TODO 特征集？2020年10月12日
 
 下面的示例导入 **typeinfo.pets** ，超前使用了类型信息一章中的类库。这个类库包含了 **Pet** 类层次结构，以及用于随机生成 **Pet** 对象的一些工具类。此时不需要了解完整的详细信息，只需要知道两点：
 
@@ -1187,7 +1187,7 @@ B r o n t o s a u r u s
 
 自动包装机制会自动将 `nextInt()` 的 **int** 结果转换为 **queue** 所需的 **Integer** 对象，并将 **char c** 转换为 **qc** 所需的 **Character** 对象。 **Queue** 接口窄化了对 **LinkedList** 方法的访问权限，因此只有适当的方法才能使用，因此能够访问到的 **LinkedList** 的方法会变少（这里实际上可以将 **Queue** 强制转换回 **LinkedList** ，但至少我们不鼓励这样做）。
 
-TODO ：不了解自动包装机制。2020年10月13日
+TODO 不了解自动包装机制。2020年10月13日
 
 与 **Queue** 相关的方法提供了完整而独立的功能。 也就是说，对于 **Queue** 所继承的 **Collection** ，在不需要使用它的任何方法的情况下，就可以拥有一个可用的 **Queue** 。
 
@@ -1255,7 +1255,7 @@ W U U U T T S S S O O O O N N L I I H H F E E E D D C C C B A A
 
 ## 集合与迭代器
 
-TODO ：本节有许多问题不理解，需要巩固。2020年10月13日
+TODO 本节有许多问题不理解，需要巩固。2020年10月13日
 
 **Collection** 是所有序列集合共有的根接口。它可能会被认为是一种“附属接口”（incidental interface），即因为要表示其他若干个接口的共性而出现的接口。此外，**java.util.AbstractCollection** 类提供了 **Collection** 的默认实现，使得你可以创建 **AbstractCollection** 的子类型，而其中没有不必要的代码重复。
 
@@ -1499,7 +1499,7 @@ public class EnvironmentVariables {
 }
 ```
 
-TODO ：未学完。2020年10月13日
+TODO 未学完。2020年10月13日
 
 
 
