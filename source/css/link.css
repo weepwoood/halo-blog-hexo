@@ -1,0 +1,37 @@
+/* 友情链接样式 */
+
+#article-container .flink .flink-list>.flink-list-item {
+    background: #EDEDED;
+}
+
+#article-container .flink .flink-list>.flink-list-item a:hover {
+    color: white;
+}
+
+[data-theme=dark] #article-container .flink .flink-list>.flink-list-item {
+    background: #30343F;
+}
+
+a.site-page.child {
+    margin: unset;
+}
+
+#nav .menus_items .menus_item .menus_item_child {
+    border-radius: 10px;
+}
+
+#nav .menus_items .menus_item .menus_item_child:hover {
+    border-radius: 10px;
+}
+
+#nav .site-page {
+    border-radius: 8px;
+}
+
+.menus_item_child>li:hover {
+    border-radius: 8px;
+}
+
+a.site-page.child>span:hover {
+    color: white!important;
+}

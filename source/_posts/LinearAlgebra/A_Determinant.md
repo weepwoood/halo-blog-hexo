@@ -44,8 +44,3 @@ $n$个不同元素的所有排列的种数，通常用$P_\{n\}$表示：
 <span>
 $$P_{n}=n\cdot(n-1)\cdot\dots\cdot3\cdot2\cdot1=n!$$
 </span>
-
-<span>
-$$\left( \sum_{k=1}^n a_k b_k \right)^{\!\!2}\leq   
-\left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)  $$
-</span>

@@ -115,6 +115,8 @@ markdown:
 
 ## 对于锚点的适配问题
 
+> 已过时，目前我 Hexo 博客使用的是[butterfly](https://github.com/jerryc127/hexo-theme-butterfly)主题未对以下内容进行优化
+
 在我使用的[matery](https://github.com/blinkfox/hexo-theme-matery/)主题中，文章内`a`标签中默认加入了`target:_brank`属性，这使得点击链接会跳转到新的窗口中现实，不符合锚点需要的页面内的跳转功能
 
 解决办法，在主题的 source\js\matery.js 文件中找到如下代码，并注释`$('#articleContent a').attr('target', '_blank');`

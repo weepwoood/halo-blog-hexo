@@ -1,0 +1,15 @@
+- class_name: 友链
+  class_desc: 
+  link_list:
+    - name: Heo
+      link: https://blog.zhheo.com/
+      avatar: https://cdn.jsdelivr.net/gh/zhheo/Guli@main/img/wechat_share.png
+      descr: 爱折腾的设计师
+    - name: Akilar
+      link: https://akilar.top
+      avatar: https://akilar.top/img/siteicon/favicon.png
+      descr: 欢迎光临糖果屋
+    - name: XAOXAO
+      link: https://xaoxuu.com/
+      avatar: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/xaoxao.png
+      descr: iOS 开发者

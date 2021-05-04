@@ -7,15 +7,17 @@
 #   name || link || icon
 
 menu:
-  Home: / || fas fa-home
-  Archives: /archives/ || fas fa-archive
-  Tags: /tags/ || fas fa-tags
-  Categories: /categories/ || fas fa-folder-open
-  Message: /message/ || fas fa-envelope
+  主页: / || fas fa-home
+  # 文章: /page/archives/ || fas fa-archive
+  标签: /page/tags/ || fas fa-tags
+  分类: /page/categories/ || fas fa-folder-open
+  反馈: /page/message/ || fas fa-envelope
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
-  # Link: /link/ || fas fa-link
+  链接||fas fa-list:
+    友情链接: /page/link/ || fas fa-link
+    实用工具: /page/toolsLink/ || fas fa-link
   # About: /about/ || fas fa-heart
 
 # Hide the child menu items in mobile sidebar
@@ -860,6 +862,7 @@ inject:
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/bilibili-banner.css"  media="defer" onload="this.media='screen'">
     # - <link rel="stylesheet" href="/css/bilibiliBanner.css"  media="defer" onload="this.media='screen'">
     - <link rel="stylesheet" href="/css/butterfly.css">
+    - <link rel="stylesheet" href="/css/link.css">
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterflymin.css"  media="defer" onload="this.media='screen'">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css"  media="defer" onload="this.media='all'">  #动画标签anima的依赖
   bottom:
