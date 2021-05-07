@@ -12,6 +12,7 @@
     "version": "5.4.0"
   },
   "dependencies": {
+    "@neilsustc/markdown-it-katex": "^0.13.5",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "gulp-html-minifier-terser": "^6.0.1",
