@@ -29,7 +29,7 @@ int main(void){
 }
 ```
 
-![image-20200525231404657]( http://img.whl123456.top/image/image-20200525231404657.png)
+![C程序解剖](https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/C程序解剖.png)
 
 ---
 

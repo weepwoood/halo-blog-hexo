@@ -55,7 +55,7 @@ The key's randomart image is:
 
 将`id_rsa.pub`公钥文件放到Setting中的SSH and GPG keys中
 
-![GitHub](http://img.whl123456.top/image/GitHubSSH.png)
+![GitHubSSH](https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/GitHubSSH.png)
 
 在Git Bash中输入以下命令，验证是否成功
 
@@ -85,7 +85,7 @@ pwd
 > 不要使用Windows自带的记事本编辑任何文件
 > 默认编码设置成UTF-8 without BOM
 
-![image-20200613103720281](http://img.whl123456.top/image/image-20200613103720281.png)
+![Git工作流](https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/Git工作流.svg)
 
 ### 文件放到Git仓库目录下
 

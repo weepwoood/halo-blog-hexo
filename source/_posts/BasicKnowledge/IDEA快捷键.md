@@ -139,4 +139,4 @@ IDEA快捷键
 
 ## 中文字体异常设置
 
-![中文字体异常设置]( http://img.whl123456.top/image/中文字体异常设置.png)
+![中文字体异常设置](https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/中文字体异常设置.png)
