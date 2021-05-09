@@ -8,6 +8,7 @@ mathjax: true
 #katex: true
 large: true
 bilibili_banner: spring
+categories: 数据结构
 ---
 
 【知识框架】

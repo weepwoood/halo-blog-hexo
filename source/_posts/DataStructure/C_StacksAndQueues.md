@@ -7,6 +7,7 @@ description: 描述。
 mathjax: true
 large: true
 bilibili_banner: spring
+categories: 数据结构
 ---
 
 【考纲内容】
