@@ -16,6 +16,11 @@ bilibili_banner: false
 categories: 数据结构
 ---
 
+学习资料：
+
+{% link 旧金山大学的数据结构可视化网站, https://www.cs.usfca.edu/~galles/visualization/Algorithms.html, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@master/img/网站.svg %}
+
+{% link visualgo数据结构可视化网站, https://visualgo.net/zh, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@master/img/网站.svg %}
 
 
 参考资料：《王道2021年数据结构》、《王道2022年数据结构》
