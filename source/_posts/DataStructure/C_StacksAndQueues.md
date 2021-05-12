@@ -1,5 +1,5 @@
 ---
-title: 数据结构——栈和队列
+title: 栈和队列
 date: 2021-05-02 16:35:51
 description: 描述。
 # top_img: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/704736.jpg # 页面顶部图片

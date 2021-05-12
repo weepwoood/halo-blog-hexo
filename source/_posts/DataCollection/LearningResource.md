@@ -20,13 +20,13 @@ bilibili_banner: spring # autumn 、winter
 
 - [前端学习路线](https://www.processon.com/view/link/60867464e401fd06e0b00d5e)
 - [Java后端学习路线](https://www.processon.com/view/link/608677c85653bb2fcf8b46e3)
-- [开发者路线图](https://github.com/kamranahmedse/developer-roadmap)
-- [前端开发者路线图翻译](https://zhuanlan.zhihu.com/p/339835359)
+- [Web开发路线图中文](https://github.com/ccloli/developer-roadmap-zh-CN)
 
 
 ## 视频课程
 ### 基础课程
 
+- [计算机科学速成课](https://www.bilibili.com/video/BV1EW411u7th)
 - [操作系统](https://www.bilibili.com/video/BV1YE411D7nH)
 - [计算机组成原理](https://www.bilibili.com/video/BV1BE411D7ii)
 - [数据结构](https://www.bilibili.com/video/BV1b7411N798)
@@ -55,6 +55,12 @@ bilibili_banner: spring # autumn 、winter
 - [Node.js](https://www.bilibili.com/video/BV19t411Q768)
 - [TypeScript](https://www.bilibili.com/video/BV14Z4y1u7pi)
 - [React](https://www.bilibili.com/video/BV1wy4y1D7JT)
+
+### 深度学习
+
+- [吴恩达机器学习系列课程](https://www.bilibili.com/video/BV164411b7dx)
+- [吴恩达深度学习](https://www.bilibili.com/video/BV1FT4y1E74V)
+- [Pytorch](https://www.bilibili.com/video/BV1Rv411y7oE)
 
 ## 技术书单
 
@@ -109,6 +115,13 @@ bilibili_banner: spring # autumn 、winter
 - [上海交通大学课程资源分享](https://github.com/c-hj/SJTU-Courses)
 - [华南师范大学0xFFFF CS ](https://www.yuque.com/0xffff.one/cs-learning/intro)
 
+### Web学习资源
+
+- [Web开发使用到的库](https://github.com/sindresorhus/awesome)
+- [成为Web全栈工程师](https://github.com/bmorelli25/Become-A-Full-Stack-Web-Developer)
+- [现代Web开发魔法全书](https://github.com/dexteryy/spellbook-of-modern-webdev)
+
+
 ### 前端GitHub学习资源
 
 - [javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)（基于javascript的算法和数据结构）
@@ -125,6 +138,9 @@ bilibili_banner: spring # autumn 、winter
 
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python)（Python 实现算法）
 - [TheAlgorithms/Java](https://github.com/TheAlgorithms/Java)（Java 实现算法）
+- [TheAlgorithms/C-Plus-Plus](https://github.com/TheAlgorithms/C-Plus-Plus)（C++ 实现算法）
+- [TheAlgorithms/C](https://github.com/TheAlgorithms/C)（C 实现算法）
+- [TheAlgorithms/Go](https://github.com/TheAlgorithms/Go)（Go 实现算法）
 - [数据结构和算法必知必会的50个代码实现](https://github.com/wangzheng0822/algo)
 - [LeetCode题解Go语言实现](https://github.com/halfrost/LeetCode-Go)
 - [LeetCode「代码随想录」](https://github.com/youngyangyang04/leetcode-master)

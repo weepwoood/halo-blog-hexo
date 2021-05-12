@@ -1,5 +1,5 @@
 ---
-title: 数据结构——树与二叉树
+title: 树与二叉树
 date: 2021-05-07 19:30:51
 description: 树
 # top_img: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/704736.jpg # 页面顶部图片

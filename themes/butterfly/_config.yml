@@ -30,7 +30,7 @@ highlight_theme: light #  darker / pale night / light / ocean / mac / mac light 
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: 1000 # unit: px
+highlight_height_limit: false # unit: px
 code_word_wrap: false
 
 # copy settings
@@ -859,16 +859,17 @@ inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/bilibili-banner.css"  media="defer" onload="this.media='screen'">
     # - <link rel="stylesheet" href="/css/bilibiliBanner.css"  media="defer" onload="this.media='screen'">
-    - <link rel="stylesheet" href="/css/butterfly.css">
-    - <link rel="stylesheet" href="/css/link.css">
-    # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterflymin.css"  media="defer" onload="this.media='screen'">
+    # - <link rel="stylesheet" href="/css/butterfly.css">
+    # - <link rel="stylesheet" href="/css/link.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/bilibili-banner.css"  media="defer" onload="this.media='screen'">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterflymin.css"  media="defer" onload="this.media='screen'">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/link.css"  media="defer" onload="this.media='screen'">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css"  media="defer" onload="this.media='all'">  #动画标签anima的依赖
   bottom:
     # - <script src="xxxx"></script>
-    - <script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
     - <script defer src="/js/butterfly.js"></script>
+    - <script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
     # 自butterfly_v3.4.0+开始，主题基本实现去jquery化，需要自己添加引用，请读者根据版本自行决定是否添加这行引用。
     - <script defer src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js"></script>
     #数据集合标签issues的依赖
@@ -890,8 +891,8 @@ CDN:
   main: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/js/butterflymain.js
   # utils: /js/utils.js
   utils: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/js/butterflyutils.js
-  bilibili_banner: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/js/bilibiliBanner.js
   # bilibili_banner: /js/bilibili-banner.js
+  bilibili_banner: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/js/bilibiliBanner.js
 
   # pjax
   pjax: https://cdn.jsdelivr.net/npm/pjax/pjax.min.js

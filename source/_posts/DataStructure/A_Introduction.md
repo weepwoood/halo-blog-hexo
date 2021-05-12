@@ -1,5 +1,5 @@
 ---
-title: 数据结构——绪论
+title: 数据结构绪论
 date: 2021-04-27 13:57:51
 updated: 2021-04-27 13:57:51
 comments: true

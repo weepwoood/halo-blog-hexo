@@ -1,5 +1,5 @@
 ---
-title: 数据结构——线性表
+title: 线性表
 date: 2021-04-27 17:02:51
 updated: 2021-04-27 17:02:51
 comments: true
