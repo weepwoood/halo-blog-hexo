@@ -6,6 +6,12 @@
     --dark_font_color_my: rgba(255, 255, 255, 0.7);
 }
 
+/* 链接卡片的margin */
+
+.tag.link {
+    margin-bottom: 0.9em;
+}
+
 /* 公式字体大小 */
 
 mjx-math {
