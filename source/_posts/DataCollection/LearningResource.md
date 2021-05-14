@@ -144,6 +144,7 @@ bilibili_banner: spring # autumn 、winter
 - [数据结构和算法必知必会的50个代码实现](https://github.com/wangzheng0822/algo)
 - [LeetCode题解Go语言实现](https://github.com/halfrost/LeetCode-Go)
 - [LeetCode「代码随想录」](https://github.com/youngyangyang04/leetcode-master)
+- [《数据结构》课本源码与习题解析](https://github.com/kangjianwei/Data-Structure)
 
 ## 在线工具网站
 
