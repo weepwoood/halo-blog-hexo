@@ -14,6 +14,8 @@ highlight_shrink: true # 代码框是否展开
 large: true
 bilibili_banner: false
 categories: 数据结构
+tags:
+- 数据结构
 ---
 
 学习资料：

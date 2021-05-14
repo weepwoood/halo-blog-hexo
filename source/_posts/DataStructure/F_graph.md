@@ -10,6 +10,8 @@ large: true
 sticky: 2
 bilibili_banner: spring
 categories: 数据结构
+tags:
+- 数据结构
 ---
 
 {% link C语言实现图数据结构, https://github.com/TheAlgorithms/C/tree/master/data_structures/graphs, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-b@master/img/GithubIcon.jpg %}

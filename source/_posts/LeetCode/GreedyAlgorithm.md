@@ -7,6 +7,7 @@ description: LeetCode刷题之贪心算法
 mathjax: true
 #katex: true
 large: true
+highlight_shrink: true
 bilibili_banner: spring
 categories: LeetCode
 tags: 

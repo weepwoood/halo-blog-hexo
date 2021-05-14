@@ -649,7 +649,7 @@ aside:
     button:
       enable: true
       icon: fab fa-github
-      text: Follow Me
+      text: GitHub
       link: https://github.com/lanqilu
   card_announcement:
     enable: false
@@ -660,7 +660,7 @@ aside:
     sort: date # date or updated
     sort_order: # Don't modify the setting unless you know how it works
   card_categories:
-    enable: true
+    enable: false
     limit: 8 # if set 0 will show all
     expand: none # none/true/false
     sort_order: # Don't modify the setting unless you know how it works
@@ -860,11 +860,11 @@ inject:
     # - <link rel="stylesheet" href="/xxx.css">
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css">
     # - <link rel="stylesheet" href="/css/bilibiliBanner.css"  media="defer" onload="this.media='screen'">
-    # - <link rel="stylesheet" href="/css/butterfly.css">
-    # - <link rel="stylesheet" href="/css/link.css">
+    - <link rel="stylesheet" href="/css/butterfly.css">
+    - <link rel="stylesheet" href="/css/link.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/bilibili-banner.css"  media="defer" onload="this.media='screen'">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterflymin.css"  media="defer" onload="this.media='screen'">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/link.css"  media="defer" onload="this.media='screen'">
+    # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterflymin.css"  media="defer" onload="this.media='screen'">
+    # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/link.css"  media="defer" onload="this.media='screen'">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css"  media="defer" onload="this.media='all'">  #动画标签anima的依赖
   bottom:
     # - <script src="xxxx"></script>
