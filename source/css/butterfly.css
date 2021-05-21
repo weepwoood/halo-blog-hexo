@@ -11,6 +11,12 @@
     font-weight: 500;
 }
 
+/* tab 卡片padding */
+
+#article-container .tabs>.tab-contents .tab-item-content {
+    padding-bottom: 0.6rem;
+}
+
 /* 卡片字体 */
 
 ul.card-archive-list {
@@ -534,6 +540,7 @@ details>div>ul>li::before {
     -webkit-line-clamp: 3;
     color: rgba(141, 140, 140, 0.856);
     font-size: 0.8rem;
+    line-height: 160%;
 }
 
 /*链接卡片图片不修改margin*/
@@ -662,7 +669,7 @@ ol.toc {
 /*代码边框*/
 
 #article-container figure.highlight, #article-container pre[class*=language-] {
-    border-radius: 1em;
+    border-radius: 5px;
 }
 
 /*Fowller me*/
@@ -1070,9 +1077,12 @@ div.timenode .meta:after {
     -o-transition: all .28s ease
 }
 
+/* 时间轴小标题 */
+
 div.timenode .meta p {
     font-weight: 700;
-    margin: 0 0 0 24px
+    margin: 0 0 0 10px!important;
+    font-size: 0.7rem;
 }
 
 div.timenode .body {

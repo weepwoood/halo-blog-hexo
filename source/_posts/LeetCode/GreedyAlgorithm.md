@@ -71,12 +71,76 @@ tags:
 using namespace std;
 
 class Solution {
-public:
-    static int findContentChildren(vector<int> &g, vector<int> &s) {
+   public:
+    static int findContentChildren(vector<int>& g, vector<int>& s) {
+        // 对胃口值进行升序排序
         sort(g.begin(), g.end());
+        // 对饼干进行升序排序
         sort(s.begin(), s.end());
         int child = 0, cookie = 0;
+        // 循环遍历，如果其中一个数组长度小于另一个则跳出循环
         while (child < g.size() && cookie < s.size()) {
+            if (g[child] <= s[cookie]) {
+                // 满足一个孩子
+                child++;
+            }
+            // 无论是否满足都将饼干++
+            cookie++;
+        }
+        // 返回满足的孩子数
+        return child;
+    }
+};
+
+void test1() {
+    vector<int> children = {1, 2, 3};
+    vector<int> cookies = {1, 1};
+    int result = Solution::findContentChildren(children, cookies);
+    cout << result << endl;
+}
+void test2() {
+    vector<int> children = {1, 2};
+    vector<int> cookies = {1, 2, 3};
+    int result = Solution::findContentChildren(children, cookies);
+    cout << result << endl;
+}
+
+int main() {
+    cout << "example 1 " << endl;
+    test1();
+    cout << "example 2 " << endl;
+    test2();
+}
+```
+
+```python
+def findContentChildren(g, s):
+    # 升序排序
+    g.sort()
+    s.sort()
+    child = cookie = 0
+    while(child < len(g) and cookie < len(s)):
+        if (g[child] <= s[cookie]):
+            child += 1
+        cookie += 1
+    return child
+
+
+test1 = findContentChildren([1, 2, 3], [1, 1])
+print(test1)
+test2 = findContentChildren([1, 2], [1, 2, 3])
+print(test2)
+```
+
+```java
+import java.util.Arrays;
+
+class Solution {
+    public int findContentChildren(int[] g, int[] s) {
+        Arrays.sort(s);
+        Arrays.sort(g);
+        int child = 0, cookie = 0;
+        while (child < g.length && cookie < s.length) {
             if (g[child] <= s[cookie]) {
                 child++;
             }
@@ -84,15 +148,27 @@ public:
         }
         return child;
     }
-};
 
-int main() {
-    vector<int> children = {1, 2};
-    vector<int> cookies = {1, 2, 3};
-    int result = Solution::findContentChildren(children, children);
-    cout << result << endl;
+    static void test(int[] g, int[] s){
+        Solution solution = new Solution();
+        int result = solution.findContentChildren(g, s);
+        System.out.println(result);
+    }
+
+    public static void main(String[] args) {
+        int[] g1 = {1, 2, 3};
+        int[] s1 = {1, 1};
+        System.out.println("example 1");
+        test(g1,s1);
+
+        int[] g2 = {1, 2};
+        int[] s2 = {1, 2,3};
+        System.out.println("example 2");
+        test(g2,s2);
+    }
 }
 ```
+
 
  **<font color="#33a3dc">复杂度分析</font>**
 
@@ -104,6 +180,37 @@ int main() {
 
 
 {% link 135. 分发糖果, https://leetcode-cn.com/problems/candy/, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-b@master/img/leetcodeicon.svg%}
+
+老师想给孩子们分发糖果，有 N 个孩子站成了一条直线，老师会根据每个孩子的表现，预先给他们评分。
+
+你需要按照以下要求，帮助老师给这些孩子分发糖果：
+
++ 每个孩子至少分配到 1 个糖果。
++ 评分更高的孩子必须比他两侧的邻位孩子获得更多的糖果。
+
+那么这样下来，老师至少需要准备多少颗糖果呢？
+
+{% tabs 分发糖果 %}
+<!-- tab 示例 1 -->
+
+输入：`[1,0,2]`
+
+输出：`5`
+
+解释：你可以分别给这三个孩子分发 2、1、2 颗糖果。
+
+<!-- endtab -->
+
+<!-- tab 示例 2 -->
+
+输入：`[1,2,2]`
+
+输出：`4`
+
+解释：你可以分别给这三个孩子分发 1、2、1 颗糖果。第三个孩子只得到 1 颗糖果，这已满足上述两个条件。
+
+<!-- endtab -->
+{% endtabs %}
 
 
 虽然这一道题也是运用贪心策略，但我们只需要简单的两次遍历即可：
@@ -156,6 +263,45 @@ int main() {
 }
 ```
 
+```python
+def candy(ratings):
+    lens = len(ratings)
+    if(lens < 2):
+        return lens
+
+    # 将糖果数量列表每项值初始化为1
+    num_list = [1 for _ in range(0, lens)]
+
+    # 先从左往右遍历一遍
+    for i in range(0, lens-1):
+        # 如果右边孩子的评分比左边的高
+        if(ratings[i+1] > ratings[i]):
+            # 右边孩子的糖果数更新为左边孩子的糖果数加 1
+            num_list[i+1] = num_list[i]+1
+
+    # 再从右往左遍历一遍
+    for j in range(lens-1, 0, -1):
+        # 如果左边孩子的评分比右边的高
+        # 且左边孩子当前的糖果数不大于右边孩子的糖果数
+        if(ratings[j-1] > ratings[j] and num_list[j-1] <= num_list[j]):
+            num_list[j-1] = num_list[j]+1
+
+    num = 0
+    # 求得总糖果数
+    for k in num_list:
+        num += k
+    return num
+
+
+print(candy([1, 0, 2]))
+print(candy([1, 2, 2]))
+print(candy([1, 3, 2, 2, 1]))
+print(candy([1, 2]))
+print(candy([1]))
+```
+
+
+
  **<font color="#33a3dc">复杂度分析</font>**
 
 时间复杂度：$O(n)$，其中 $n$ 是孩子的数量。我们需要遍历两次数组以分别计算满足左规则或右规则的最少糖果数量。
@@ -168,7 +314,45 @@ int main() {
 
 {% link 435. 无重叠区间, https://leetcode-cn.com/problems/non-overlapping-intervals/, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-b@master/img/leetcodeicon.svg%}
 
-<br/>
+给定一个区间的集合，找到需要移除区间的最小数量，使剩余区间互不重叠。
+
+注意:
+
+1. 可以认为区间的终点总是大于它的起点。
+2. 区间 `[1,2]` 和 `[2,3]` 的边界相互“接触”，但没有相互重叠。
+
+{% tabs 无重叠区间 %}
+<!-- tab 示例 1 -->
+
+输入：`[ [1,2], [2,3], [3,4], [1,3] ]`
+
+输出：`1`
+
+解释：移除 `[1,3]` 后，剩下的区间没有重叠。
+
+<!-- endtab -->
+
+<!-- tab 示例 2 -->
+
+输入：`[ [1,2], [1,2], [1,2] ]`
+
+输出：`2`
+
+解释：你需要移除两个 `[1,2]` 来使剩下的区间没有重叠
+
+<!-- endtab -->
+
+<!-- tab 示例 3 -->
+
+输入：`[ [1,2], [2,3] ]`
+
+输出：`0`
+
+解释：你不需要移除任何区间，因为它们已经是无重叠的了。
+
+<!-- endtab -->
+{% endtabs %}
+
 
 在选择要保留区间时，区间的结尾十分重要：选择的区间结尾越小，余留给其它区间的空间就越大，就越能保留更多的区间。因此，我们采取的贪心策略为，优先保留结尾小且不相交的区间。
 

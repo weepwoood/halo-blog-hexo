@@ -6,12 +6,6 @@ categories:
   - Spring
 date: 2020-03-21 20:11:20
 ---
-
-
-Spring框架
-
----
-
 ## 基础知识
 
 ### 程序的耦合
@@ -51,11 +45,11 @@ JavaBean：用java语言编写的可重用组件。JavaBean >  实体类
 >
 > JavaBean 是一种JAVA语言写成的可重用组件。为写成JavaBean，类必须是具体的和公共的，并且具有无参数的构造器。JavaBean 通过提供符合一致性设计模式的公共方法将内部域暴露成员属性，set和get方法获取。众所周知，属性名称符合这种模式，其他Java 类可以通过自省机制(反射机制)发现和操作这些JavaBean 的属性。
 
-### Spring的狭义与广义
+### Spring 的狭义与广义
 
-狭义上的Spring特指Spring框架（Spring Framework）
+狭义上的 Spring 特指 Spring 框架（Spring Framework）
 
-广义上的Spring是指以Spring框架为核心的Spring技术栈
+广义上的 Spring 是指以 Spring 框架为核心的 Spring 技术栈
 
 ## Spring框架概述
 
