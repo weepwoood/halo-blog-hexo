@@ -83,7 +83,7 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /img/favicon.png
+favicon: /img/favicon6.png
 
 # Avatar (頭像)
 avatar:
@@ -305,7 +305,7 @@ livere:
 gitalk:
   client_id: e5a3e7481d96cd2d0a56
   client_secret: ae9c98707484f2afb1db73120ce2f3347afb32eb
-  repo: BlogResources
+  repo: Gitalk
   owner: lanqilu
   admin: lanqilu
   language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru
@@ -595,8 +595,8 @@ beautify:
 font:
   global-font-size: 
   code-font-size:
-  font-family: "Source Han Sans SC"
-  code-font-family:
+  font-family: 
+  code-font-family: 
 
 # Font settings for the site title and site subtitle
 # 左上角網站名字 主頁居中網站名字
@@ -884,8 +884,8 @@ inject:
 # 非必要請不要修改
 CDN:
   # main
-  # main_css: /css/index.css
-  main_css: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterflyindex.css
+  main_css: /css/index.css
+  # main_css: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/css/butterflyindex.css
   jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
   # main: /js/main.js
   main: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-resources@latest/js/butterflymain.js

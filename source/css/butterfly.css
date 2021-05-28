@@ -6,9 +6,62 @@
     --dark_font_color_my: rgba(255, 255, 255, 0.7);
 }
 
+@font-face {
+    font-family: SourceHanSansCN-Normal;
+    /* unicode-range: U+2018-2019, U+201C-201D; */
+    src: url(https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-c@master/font/SourceHanSansCN/SourceHanSansCN-Normal.otf);
+    /* font-weight: 700; */
+}
+
+@font-face {
+    font-family: SourceHanSansCN-Medium;
+    /* unicode-range: U+2018-2019, U+201C-201D; */
+    src: url(https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-c@master/font/SourceHanSansCN/SourceHanSansCN-Medium.otf)
+}
+
+@font-face {
+    font-family: SF-Pro-Rounded-Medium;
+    src: url(https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-c@master/font/SanFranciscoPro/SF-Pro-Rounded-Medium.otf);
+}
+
+@font-face {
+    font-family: ZhuZiAYuanJWD;
+    src: url(https://cdn.jsdelivr.net/npm/akilar-candyassets/fonts/ZhuZiAYuanJWD.ttf);
+}
+
+/* @font-face {
+    font-family: SF-Pro-Text-Medium;
+    src: url(https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-c@master/font/SanFranciscoPro/SF-Pro-Text-Medium.otf);
+}
+
+@font-face {
+    font-family: SF-Pro-Display-Medium;
+    src: url(https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-c@master/font/SanFranciscoPro/SF-Pro-Display-Medium.otf);
+} */
+
+/* body {
+    font-family: "Helvetica", "Helvetica Neue", "SC"!important;
+} */
+
+body {
+    font-family: "SF-Pro-Rounded-Medium", "SourceHanSansCN-Normal", "SourceHanSansCN-Medium";
+}
+
+p {
+    font-family: "SF-Pro-Rounded-Medium", "ZhuZiAYuanJWD";
+}
+
+li {
+    font-family: "SF-Pro-Rounded-Medium", "ZhuZiAYuanJWD";
+}
+
+a.link-card .text {
+    font-family: "SF-Pro-Rounded-Medium", "SourceHanSansCN-Normal";
+}
+
 #aside-content .card-info .card-info-data>.card-info-data-item a .headline {
     font-size: 1.1em;
-    font-weight: 500;
+    /* font-weight: 500; */
 }
 
 /* tab 卡片padding */
@@ -70,7 +123,7 @@ ul.card-archive-list {
     color: #395ca3;
     font-size: 1.5em;
     line-height: 1.3;
-    font-weight: 500;
+    /* font-weight: 500; */
     text-align: center;
 }
 
@@ -251,13 +304,12 @@ mjx-container[jax="CHTML"][display="true"] {
         padding: 0 36px;
         width: 100%;
         height: 60px;
-        font-size: 1.3em;
         align-content: flex-end;
         flex-direction: column;
         justify-content: center;
         transform: initial;
         font-size: 1.4em;
-        font-weight: 500;
+        font-weight: 600;
     }
     /* #page-header.not-top-img #nav:hover {background-color: red;} */
     a.site-page {
@@ -506,6 +558,12 @@ details>div>ul>li::before {
     max-width: 1200px;
 }
 
+@media screen and (min-width: 1800px) {
+    .layout {
+        max-width: 1350px;
+    }
+}
+
 /*主页卡片高度*/
 
 @media screen and (min-width: 769px) {
@@ -660,6 +718,12 @@ ol.toc {
     border-radius: 8px;
 }
 
+/* 公式行高 */
+
+mjx-container[jax="CHTML"] {
+    line-height: 0.5!important;
+}
+
 /*目录宽度*/
 
 /* #aside-content .card-widget{
@@ -808,7 +872,7 @@ span.inline-tag {
     display: inline;
     padding: .2em .6em .3em;
     font-size: 90%;
-    font-weight: 400;
+    /* font-weight: 400; */
     line-height: 1;
     color: #fff;
     text-align: center;
@@ -823,7 +887,7 @@ span.inline-tag {
     display: block;
     width: 100%;
     text-align: left;
-    font-weight: 500;
+    /* font-weight: 500; */
     line-height: 32px;
     border-left-color: #767676;
     background: #f6f6f6
@@ -1080,7 +1144,7 @@ div.timenode .meta:after {
 /* 时间轴小标题 */
 
 div.timenode .meta p {
-    font-weight: 700;
+    /* font-weight: 700; */
     margin: 0 0 0 10px!important;
     font-size: 0.7rem;
 }
@@ -1401,7 +1465,7 @@ div .btns a>i:first-child {
 
 div .btns a b, div .btns a p {
     margin: .25em;
-    font-weight: 400;
+    /* font-weight: 400; */
     line-height: 1.25;
     word-wrap: break-word
 }
