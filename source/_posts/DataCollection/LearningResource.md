@@ -105,6 +105,10 @@ bilibili_banner: spring # autumn 、winter
 - [大厂面试题](https://github.com/0voice/interview_internal_reference)
 - [GitHub中文排行榜](https://github.com/kon9chunkit/GitHub-Chinese-Top-Charts)
 - [HelloGitHub](https://github.com/521xueweihan/HelloGitHub)
+- [C++那些事](https://github.com/Light-City/CPlusPlusThings)
+- [现代 C++ 教程](https://github.com/changkun/modern-cpp-tutorial)
+- [C++ Template 进阶指南](https://github.com/wuye9036/CppTemplateTutorial)
+- [MyTinySTL](https://github.com/Alinshans/MyTinySTL)
 
 ### 大学课程共享
 

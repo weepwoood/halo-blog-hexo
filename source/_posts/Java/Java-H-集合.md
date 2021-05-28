@@ -1,5 +1,6 @@
 ---
-title: Java集合
+title: Java 集合
+cover: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-b@master/img/Java.png
 tags:
   - Java
 categories:

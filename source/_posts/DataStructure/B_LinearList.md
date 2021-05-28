@@ -93,7 +93,7 @@ typedef struct{
 ```c++
 // 初始化一个顺序表
 void InitList(StaticSqList &L) {
-    for (int i = 0; i < Maxsize; i++) {
+    for (int i = 0; i < MaxSize; i++) {
         L.data[i] = 0;  // 将所有数据元素设置默认值(可省略)
     }
     L.length = 0;       // 顺序表初始长度为0
@@ -191,7 +191,7 @@ bool ListInsert(StaticSqList &L, int i, int element) {
         return false;
     }
     // 储存已满不能插入
-    if (L.length >= Maxsize) {
+    if (L.length >= MaxSize) {
         return false;
     }
     // 将第i个元素及之后的元素后移
@@ -312,23 +312,23 @@ typedef struct LNode {
 ```c++
 // 初始化不带头结点的空单链表函数
 bool InitList(LinkList &L){
-    L = NULL; 
+    L = nullptr; 
     return true;
 }
 ```
 
 利用单链表可以解决顺序表需要大量连续存储单元的缺点，但单链表附加指针域，也存在浪费存储空间的缺点。由于单链表的元素离散地分布在存储空间中，所以单链表是非随机存取的存储结构，即不能直接找到表中某个特定的结点。查找某个特定的结点时，需要从表头开始遍历，依次查找。
 
-通常用头指针来标识一个单链表，如单链表 L，头指针为 NULL 时表示一个空表。此外，为了操作上的方便，在单链表第一个结点之前附加一个结点， 称为<font color="#ea66a6">头结点</font>。头结点的数据域可以不设任何信息，也可以记录表长等信息。头结点的指针域指向线性表的第一个元素结点。
+通常用头指针来标识一个单链表，如单链表 L，头指针为 nullptr 时表示一个空表。此外，为了操作上的方便，在单链表第一个结点之前附加一个结点， 称为<font color="#ea66a6">头结点</font>。头结点的数据域可以不设任何信息，也可以记录表长等信息。头结点的指针域指向线性表的第一个元素结点。
 
 ```c++
 // 初始化带头结点的空单链表函数
 bool InitList(LinkList &L){
     L = (LNode *) malloc(sizeof(LNode)); // 分配一个头结点
-    if(L == NULL){ // 内存不足，分配失败
+    if(L == nullptr){ // 内存不足，分配失败
         return false;
     }
-    L->next = NULL; // 头结点之后暂时还没有结点 
+    L->next = nullptr; // 头结点之后暂时还没有结点 
     return true;
 }
 ```
@@ -710,7 +710,7 @@ while (p->prior != nullptr){
 
 #### 循环单链表
 
-循环单链表和单链表的区别在于，表中最后一个结点的指针不是NULL，而改为指向头结点，从而整个链表形成一个环。
+循环单链表和单链表的区别在于，表中最后一个结点的指针不是 nullptr，而改为指向头结点，从而整个链表形成一个环。
 
 ```c++
 typedef struct LNode {
@@ -721,7 +721,7 @@ typedef struct LNode {
 // 初始化带头结点的空单链表函数
 bool InitList(LinkList &L){
     L = (LNode *) malloc(sizeof(LNode)); // 分配一个头结点
-    if(L == NULL){ // 内存不足，分配失败
+    if(L == nullptr){ // 内存不足，分配失败
         return false;
     }
     L->next = L; // 头结点next指向头结点

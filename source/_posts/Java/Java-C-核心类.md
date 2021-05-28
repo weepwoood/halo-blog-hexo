@@ -1,5 +1,6 @@
 ---
-title: Java核心类
+title: Java 核心类
+cover: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-b@master/img/Java.png
 mathjax: true
 tags:
   - Java

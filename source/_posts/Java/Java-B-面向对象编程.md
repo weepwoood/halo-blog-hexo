@@ -1,5 +1,6 @@
 ---
-title: Java面向对象编程
+title: Java 面向对象编程
+cover: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-b@master/img/Java.png
 tags:
   - Java
 categories:

@@ -1,5 +1,5 @@
 ---
-title: 计算机系统概述
+title: 操作系统概述
 date: 2021-04-18 11:59:48.87
 updated: 2021-04-22 19:27:50.226
 url: http://blog.halo123.top:8090/archives/overviewofcomputersystems

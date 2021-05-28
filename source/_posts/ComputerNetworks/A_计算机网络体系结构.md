@@ -1,8 +1,7 @@
 ---
 title: 计算机网络体系结构
-date: 2021-04-22 22:09:39.308
-updated: 2021-04-22 22:24:51.844
-url: http://blog.halo123.top:8090/archives/计算机网络体系结构
+date: 2021-04-22 22:09:39
+cover: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/704736.jpg # 页面缩略图
 categories: 计算机网络
 tags: 计算机网络
 ---

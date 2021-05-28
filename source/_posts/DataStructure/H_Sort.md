@@ -7,6 +7,7 @@ description: 排序
 mathjax: true
 #katex: true
 large: true
+cover: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-c@master/img/quicksort.2krwxu0d7ns0.gif
 bilibili_banner: spring
 categories: 数据结构
 tags:

@@ -65,8 +65,6 @@ yum install git
 
 安装Oracle JDK
 
-
-
 ## node环境安装
 
 ![node]( http://img.whl123456.top/image/image-20200611002658715.png)

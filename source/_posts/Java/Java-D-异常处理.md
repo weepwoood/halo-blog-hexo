@@ -1,6 +1,7 @@
 ---
-title: Java异常处理
-description: Java异常和日志
+title: Java 异常处理
+cover: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-c@master/img/maximilian-weisbecker-1td5Iq5IvNc-unsplash.2cx83e37bytc.jpg
+description: Java 异常和日志
 tags:
   - Java
 categories:

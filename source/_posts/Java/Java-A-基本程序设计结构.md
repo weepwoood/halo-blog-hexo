@@ -1,5 +1,6 @@
 ---
-title: Java基本程序设计结构
+title: Java 基本程序设计结构
+cover: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-b@master/img/Java.png
 date: 2020-10-29 16:32:43
 tags:
 - Java
