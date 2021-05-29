@@ -1,5 +1,5 @@
 ---
-title: VSCode下C\C++开发环境配置
+title: VSCode 下 C\C++ 开发环境配置
 cover: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-b@master/img/vscoe.749spwxeqw80.png
 tags:
   - C
@@ -9,29 +9,38 @@ date: 2021-05-24 21:15:36
 
 ---
 
-参考视频：https://www.bilibili.com/video/BV13K411M78v
+参考视频：
+
+{% link 哔哩哔哩视频, https://www.bilibili.com/video/BV13K411M78v, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-b@master/img/bilibiliIcon.svg %}
 
 ## 开发环境搭建
 
-mingw-w64 编译器 [官网下载链接](http://www.mingw-w64.org/doku.php/download)
-
-Cmake工具 [官网下载链接](https://cmake.org/download/)
++ MinGW-w64 编译器 [官网下载链接](http://www.mingw-w64.org/doku.php/download)
++ CMake工具 [官网下载链接](https://cmake.org/download/)
 
 将下载的压缩包解压，并将 解压后的文件夹的 bin 文件夹目录放到环境变量中。 
 
-VSCode插件，在插件中搜索下载
+VSCode 插件，在插件中搜索下载
 
-+ C\C++：智能提示、debug和代码浏览
-+ Cmake：Cmake 的语法支持
-+ Cmake Tools：Cmake 的扩展支持
++ C\C++：智能提示、debug 和代码浏览
++ CMake：CMake 的语法支持
++ CMake Tools：CMake 的扩展支持
 
-Cmake Tools 安装的坑
+---
+
+CMake Tools 安装遇到的坑
+
+问题描述：
+
+CMake Tools 版本为 1.7.3，报错代码如下
 
 ```
 Bad CMake executable . Is it installed or settings contain the correct path (cmake.cmakePath)? 
 ```
 
-Cmake Tools版本为1.7.3。解决方法是在设置中（[Settings]->[Extensions]->[CMake Tools Configuration]->[CMake:Cmake Path]）指定 cmake.exe 的文件地址。具体方法是打开设置（快捷键 Ctrl+逗号）搜索 cmake.cmakePath 可以看到 Name/path of the CMake executable to use. 默认为 cmake 将其设置自己安装 cmake.exe 文件地址，例如我的设置是 E:\Program\Develop\Cmake\bin\cmake.exe。
+原因是 CMake Tools 没有找到正确的 CMake 安装路径 
+
+解决方法：在设置中指定 cmake.exe 的文件地址。具体方法是打开设置（快捷键 Ctrl + 逗号）搜索 cmake.cmakePath 可以看到 Name/path of the CMake executable to use. 默认为 cmake 将其设置自己安装 cmake.exe 文件地址，例如我的设置是 E:\Program\Develop\Cmake\bin\cmake.exe。
 
 参考解决地址：https://github.com/microsoft/vscode-cmake-tools/issues/685
 
@@ -41,7 +50,6 @@ Cmake Tools版本为1.7.3。解决方法是在设置中（[Settings]->[Extension
 
 ```cpp
 #include <iostream>
-
 using namespace std;
 
 void swap(int &a, int &b) {
@@ -67,7 +75,7 @@ int main() {
 }
 ```
 
-这里顺便写段实例代码，打开命令行 VSCode 默认快捷键为 Ctrl 加 反引号。
+这里顺便写段实例代码，打开命令行 VSCode 默认快捷键为 Ctrl 加反引号。
 
 ```
 E:\Project\CodeBase\C\VSCode>g++ .\main.cpp
@@ -97,11 +105,9 @@ E:\Project\CodeBase\C\VSCode> g++ -g .\main.cpp -o swap
 
 将上述代码拆分成多个文件如下：
 
-many_main.cpp
-
 ```cpp
+// many_main.cpp
 #include <iostream>
-
 #include "many.h"
 
 using namespace std;
@@ -123,9 +129,8 @@ int main() {
 }
 ```
 
-many_swap.cpp
-
 ```cpp
+// many_swap.cpp
 #include "many.h"
 
 void swap(int &a, int &b) {
@@ -136,9 +141,8 @@ void swap(int &a, int &b) {
 }
 ```
 
-many.h
-
 ```cpp
+// many.h
 void swap(int &a, int &b);
 ```
 
@@ -148,7 +152,7 @@ void swap(int &a, int &b);
 g++ -g .\many_main.cpp .\many_swap.cpp -o many_swap 
 ```
 
-如果使用 VSCode 默认生成的 launch.json 进行调试会出错，这里需要进行配置，修改`program` 属性为 g++ 生成的可调式的可执行文件名，并注释 `preLaunchTask`，这里因为自己使用 g++ 命令编程完成，不在需要 VSCode 进行编译
+如果使用 VSCode 默认生成的 launch.json 进行调试会出错，这里需要进行配置，修改 `program` 属性为 g++ 生成的可调式的可执行文件名，并注释 `preLaunchTask`，这里因为自己使用 g++ 命令编程完成，不在需要 VSCode 进行编译
 
 ```json
 {
@@ -223,7 +227,7 @@ cmake ..
 launch.json 需要关注的点为：
 
 + `program`：可执行文件的路径
-+  `preLaunchTask`：对应 tasks.json 的 `label` 属性的值
++ `preLaunchTask`：对应 tasks.json 的 `label` 属性的值
 
 ```json
 {
