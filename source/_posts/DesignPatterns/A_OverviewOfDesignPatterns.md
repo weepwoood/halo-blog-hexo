@@ -4,7 +4,7 @@ date: 2021-04-18 18:01:08.455
 updated: 2021-04-18 18:11:29.77
 url: http://blog.halo123.top:8090/archives/设计模式概述及面向对象设计原则
 categories: 设计模式
-tags: 设计模式 | 面向对象编程
+tags: 设计模式
 ---
 
 # 设计模式概述

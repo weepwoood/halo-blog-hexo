@@ -75,6 +75,10 @@ li {
     font-family: "SF-Pro-Rounded-Medium", "ZhuZiAYuanJWD";
 }
 
+tbody tr {
+    font-family: "SF-Pro-Rounded-Medium", "ZhuZiAYuanJWD";
+}
+
 a.link-card .text {
     font-family: "SF-Pro-Rounded-Medium", "SourceHanSansCN-Normal";
 }

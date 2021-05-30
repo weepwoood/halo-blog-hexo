@@ -2,7 +2,7 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-# Site
+# Sitew
 title: HALO
 subtitle: 'HALO'
 description: '"CV"工程师'
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://halo123.top
+url: https://halo123.top
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -42,7 +42,7 @@ filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
-future: true
+future: true 
 highlight:
   enable: true
   line_number: true

@@ -11,6 +11,7 @@ highlight_shrink: true
 bilibili_banner: spring
 categories: LeetCode
 tags: 
+- LeetCode
 - 贪心算法
 ---
 
@@ -485,6 +486,141 @@ int main() {
 }
 ```
 
+## 销售价值减少的颜色球【中等】
 
- **<font color="#33a3dc">复杂度分析</font>**
+{% link 1648. 销售价值减少的颜色球, https://leetcode-cn.com/problems/sell-diminishing-valued-colored-balls/, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-b@master/img/leetcodeicon.svg%}
 
+你有一些球的库存 `inventory` ，里面包含着不同颜色的球。一个顾客想要<font color="#faa755">任意颜色</font>总数为 `orders` 的球。
+
+这位顾客有一种特殊的方式衡量球的价值：每个球的价值是目前剩下的<font color="#faa755">同色球</font>的数目。比方说还剩下 6 个黄球，那么顾客买第一个黄球的时候该黄球的价值为 6。这笔交易以后，只剩下 5 个黄球了，所以下一个黄球的价值为 5 （也就是球的价值随着顾客购买同色球是递减的）。
+
+给你整数数组 `inventory`，其中 `inventory[i]` 表示第 `i` 种颜色球一开始的数目。同时给你整数 `orders`，表示顾客总共想买的球数目。你可以按照任意顺序卖球。
+
+请你返回卖了 `orders` 个球以后最大总价值之和。由于答案可能会很大，请你返回答案对 $10^{9} + 7$ 取余数 的结果。
+
+{% tabs 销售价值减少的颜色球 %}
+<!-- tab 示例 1 -->
+
+输入：`inventory = [2,5]`，`orders = 4`
+
+输出：14
+
+解释：卖 1 个第一种颜色的球（价值为 2），卖 3 个第二种颜色的球（价值为 5 + 4 + 3）。最大总和为 2 + 5 + 4 + 3 = 14。
+
+<!-- endtab -->
+
+<!-- tab 示例 2 -->
+
+输入：`inventory = [3,5]`，`orders = 6`
+
+输出：19
+
+解释：卖 2 个第一种颜色的球（价值为 3 + 2），卖 4 个第二种颜色的球（价值为 5 + 4 + 3 + 2）。最大总和为 3 + 2 + 5 + 4 + 3 + 2 = 19。
+<!-- endtab -->
+
+<!-- tab 示例 3 -->
+
+输入：`inventory = [2,8,4,10,6]`，`orders = 20`
+
+输出：110
+
+<!-- endtab -->
+
+<!-- tab 示例 4 -->
+
+输入：`inventory = [1000000000]`，`orders = 1000000000`
+
+输出：21
+
+解释：卖 1000000000 次第一种颜色的球，总价值为 500000000。 500000000 对 $10^{9} + 7$ 取余为 21
+<!-- endtab -->
+{% endtabs %}
+
+该题使用贪心算法，很容易想到，对数组进行从大到小排序，每次让值最大的元素加到 `result`，并使 `orders-1`。 
+
+```python
+def maxProfit(inventory, orders):
+    i = 0
+    result = 0
+    # 数组元素只有一个时
+    if len(inventory) == 1:
+        while orders > 0:
+            orders = orders-1
+            result = result + inventory[0]
+            inventory[0] = inventory[0] - 1
+        return result % 1000000007
+    # 数组元素有多个时
+    while orders > 0 and i < len(inventory):
+        if inventory[i] < inventory[i + 1]:
+            inventory = sorted(inventory, reverse=True)
+        result += inventory[i]
+        inventory[i] = inventory[i] - 1
+        orders = orders - 1
+    return result % 1000000007
+
+
+if __name__ == '__main__':
+    print(maxProfit([2, 5], 4))  # 14
+    print(maxProfit([3, 5], 6))  # 19
+    print(maxProfit([2, 8, 4, 10, 6], 20))  # 110
+    print(maxProfit([10], 10))  # 55
+    print(maxProfit([1000000000], 1000000000))  # 21
+    print(maxProfit([773160767], 252264991))  # 70267492
+```
+
+但题目中给的数据比较大，如果不进行优化会超时，[优化思路](https://leetcode-cn.com/problems/sell-diminishing-valued-colored-balls/solution/liang-chong-si-lu-you-hua-tan-xin-suan-fa-you-hua-/)
+
+不需要一次一次的模拟，而是一次性买入一定数量的球，直至该球数量等于至第二多数量。对于示例 3：`inventory = [2,8,4,10,6]`，`orders = 20` 而言：
+
+首先，从大到小排序。`[10, 8, 6, 4, 2]`，然后逐步模拟：
+
++ `[10, 8, 6, 4, 2]`，`orders = 20` 数量最多的同色球的数量为 10，第二多的为 8，颜色数为 1。此时我们可以销售第一个颜色的球 2 次，获利 10 + 9 = 19。
++ `[8, 8, 6, 4, 2]`，`orders = 18` 数量最多的同色球的数量为 8，第二多（与第一不同）的为 6，颜色数为 2。此时我们可以销售 2 × 2 = 4 次，获利 (8 + 7) × 2 = 30。
++ `[6, 6, 6, 4, 2]`，`orders = 14` 数量最多的同色球的数量为 6，第二多（与第一不同）的为 4，颜色数为 3。此时我们可以销售 2 × 3 = 6 次，获利 (6 + 5) × 3 = 33。
++ `[4, 4, 4, 4, 2]`，`orders = 8` 数量最多的同色球的数量为 4，第二多（与第一不同）的为 2，颜色数 = 4。此时我们可以全部卖完，销售 2 × 4 次，获利（4 + 3）× 4 = 28。
++ 总计收入为 19 + 30 + 33 + 28 = 110.
+
+```python
+def maxProfit(inventory, orders):
+    inventory = sorted(inventory, reverse=True)
+    res = 0
+    i = 0
+    mod = 1e9+7
+    while orders > 0:
+        # 找到第二多元素的索引
+        while i < len(inventory) and inventory[i] >= inventory[0]:
+            i = i + 1
+        # 将第二多元素赋值到 nextEle
+        nextEle = 0
+        if i < len(inventory):
+            nextEle = inventory[i]
+        # 具有相同个数的元素有多少个
+        bucks = i
+        # 当前最多元素与第二多元素个数之差
+        delta = inventory[0] - nextEle
+        # 最多可以一次性销售多少次
+        rem = bucks * delta
+        # 一次性销售次数大于卖的个数
+        if rem > orders:
+            dec = orders // bucks
+            a1 = inventory[0] - dec + 1
+            an = inventory[0]
+            res = res + ((((a1 + an) * dec) // 2) * bucks)
+            res = res + ((inventory[0] - dec) * (orders % bucks))
+        # 一次性销售次数小于卖的个数
+        else:
+            # 可以卖出的最低价格
+            a1 = nextEle + 1
+            # 可以卖出的最高价格
+            an = inventory[0]
+            # 等差数列求和
+            res = res + ((((a1 + an) * delta) // 2) * bucks)
+            inventory[0] = nextEle
+        # orders 减去一次性买入个数
+        orders = orders - rem
+        # 前取模防止溢出
+        res = res % mod
+    return int(res)
+```
+
+ **<font color="#33a3dc">时间复杂度分析</font>**：$n \log(n)$
