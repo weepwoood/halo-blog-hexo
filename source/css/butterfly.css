@@ -6,6 +6,18 @@
     --dark_font_color_my: rgba(255, 255, 255, 0.7);
 }
 
+/* 编辑图标不被遮挡 */
+
+a.post-edit-link {
+    pointer-events: auto;
+}
+
+/* 编辑标签大小 */
+
+i.fas.fa-pencil-alt {
+    font-size: 0.75em;
+}
+
 @font-face {
     font-family: SourceHanSansCN-Normal;
     /* unicode-range: U+2018-2019, U+201C-201D; */
