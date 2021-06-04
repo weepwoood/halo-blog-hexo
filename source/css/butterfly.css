@@ -29,6 +29,11 @@
     src: url(https://cdn.jsdelivr.net/npm/akilar-candyassets/fonts/ZhuZiAYuanJWD.ttf);
 }
 
+@font-face {
+    font-family: MyFont;
+    src: url(https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-c@master/font/SourceHanSansCN/GenJyuuGothic-Light.ttf);
+}
+
 /* @font-face {
     font-family: SF-Pro-Text-Medium;
     src: url(https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-c@master/font/SanFranciscoPro/SF-Pro-Text-Medium.otf);

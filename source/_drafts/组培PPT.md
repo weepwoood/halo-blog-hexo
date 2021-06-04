@@ -9,9 +9,6 @@ cover: https://pic.downk.cc/item/5fe610163ffa7d37b3369f48.jpg
 large: true
 ---
 
-
-
-
 ## 组培绪论
 
 ### 植物组织培养的含义

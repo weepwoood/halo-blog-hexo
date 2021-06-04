@@ -3,7 +3,7 @@ title: 图
 date: 2021-05-09 22:50:51
 description: 图
 # top_img: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/704736.jpg # 页面顶部图片
-# cover: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/704736.jpg # 页面缩略图
+cover: https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-c@master/wallhaven-g8reee.4ts0wc1e2740.png
 mathjax: true
 #katex: true
 large: true

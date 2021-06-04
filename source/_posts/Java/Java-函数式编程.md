@@ -8,8 +8,6 @@ categories:
 date: 2020-10-14 17:13:05
 ---
 
-
-
 函数式编程语言操纵代码片段就像操作数据一样容易。 虽然 Java 不是函数式语言，但 Java 8 Lambda 表达式和方法引用 (Method References) 允许你以函数式编程。
 
 ---
