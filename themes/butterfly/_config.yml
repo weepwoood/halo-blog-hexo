@@ -303,11 +303,11 @@ livere:
 # gitalk
 # https://github.com/gitalk/gitalk
 gitalk:
-  client_id: e5a3e7481d96cd2d0a56
-  client_secret: ae9c98707484f2afb1db73120ce2f3347afb32eb
-  repo: Gitalk
-  owner: lanqilu
-  admin: lanqilu
+  client_id: 53971fa30f8caddb1851
+  client_secret: 969126085d16b05aecce02c3ef29eaf5add4d7fc
+  repo: halo-blog-gitalk
+  owner: halo-blog
+  admin: halo-blog
   language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru
   perPage: 10 # Pagination size, with maximum 100.
   distractionFreeMode: false # Facebook-like distraction free mode.

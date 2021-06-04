@@ -104,8 +104,8 @@ theme: butterfly
 deploy:
   type: 'git'
   # repo: https://halo-blog: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@github.com/halo-blog/halo-blog.github.io.git
-  repo: https://github.com/lanqilu/lanqilu.github.io.git
-  # repo: https://github.com/halo-blog/halo-blog.github.io.git
+  # repo: https://github.com/lanqilu/lanqilu.github.io.git
+  repo: https://github.com/halo-blog/halo-blog.github.io.git
   branch: main
 
 # Markdown-it config
