@@ -225,6 +225,10 @@ Markdown 还没有办法指定图片的高度与宽度，如果你需要的话�
 | 单元格 | 单元格 |  单元格  |
 | 单元格 | 单元格 |  单元格  |
 
+## Latex 
+
+https://www.zybuluo.com/codeep/note/163962 
+
 参考资料：
 
 + 阮一峰，[中文技术文档的写作规范](https://github.com/ruanyf/document-style-guide)
