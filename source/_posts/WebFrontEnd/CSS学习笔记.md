@@ -11,7 +11,9 @@ categories:
 
 ---
 
-## CSS 概述
+## 基础知识
+
+### CSS 概述
 
 - CSS 指层叠样式表 (**C**ascading **S**tyle **S**heets)
 - 样式定义**如何显示** HTML 元素
@@ -21,7 +23,7 @@ categories:
 - 外部样式表通常存储在 **CSS 文件**中
 - 多个样式定义可**层叠**为一
 
-### 样式解决了一个普遍的问题
+#### 样式解决了一个普遍的问题
 
 HTML 标签原本被设计为用于定义文档内容。通过使用 `<h1>`、`<p>`、`<table>` 这样的标签，HTML 的初衷是表达“这是标题”、“这是段落”、“这是表格”之类的信息。同时文档布局由浏览器来完成，而不使用任何的格式化标签。
 
@@ -31,17 +33,17 @@ HTML 标签原本被设计为用于定义文档内容。通过使用 `<h1>`、`<
 
 所有的主流浏览器均支持层叠样式表。
 
-### 样式表极大地提高了工作效率
+#### 样式表极大地提高了工作效率
 
 样式表定义如何显示 HTML 元素，就像 HTML 3.2 的字体标签和颜色属性所起的作用那样。样式通常保存在外部的 .css 文件中。通过仅仅编辑一个简单的 CSS 文档，外部样式表使你有能力同时改变站点中所有页面的布局和外观。
 
 由于允许同时控制多重页面的样式和布局，CSS 可以称得上 WEB 设计领域的一个突破。作为网站开发者，你能够为每个 HTML 元素定义样式，并将之应用于你希望的任意多的页面中。如需进行全局的更新，只需简单地改变样式，然后网站中的所有元素均会自动地更新。
 
-### 多重样式将层叠为一个
+#### 多重样式将层叠为一个
 
 样式表允许以多种方式规定样式信息。样式可以规定在单个的 HTML 元素中，在 HTML 页的头元素中，或在一个外部的 CSS 文件中。甚至可以在同一个 HTML 文档内部引用多个外部样式表。
 
-#### 层叠次序(优先顺序)
+##### 层叠次序(优先顺序)
 
 **当同一个 HTML 元素被不止一个样式定义时，会使用哪个样式呢？**
 
@@ -54,9 +56,9 @@ HTML 标签原本被设计为用于定义文档内容。通过使用 `<h1>`、`<
 
 因此，内联样式（在 HTML 元素内部）拥有最高的优先权，这意味着它将优先于以下的样式声明：`<head>` 标签中的样式声明，外部样式表中的样式声明，或者浏览器中的样式声明（缺省值）。
 
-## CSS 基础语法
+### CSS 基础语法
 
-### CSS 语法
+#### CSS 语法
 
 CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明。
 
@@ -82,7 +84,7 @@ selector {property: value}
 h1 {color:red; font-size:14px;}
 ```
 
-### 值的不同写法和单位
+#### 值的不同写法和单位
 
 除了英文单词 red，我们还可以使用十六进制的颜色值 #ff0000：
 
@@ -105,7 +107,7 @@ p { color: rgb(100%,0%,0%); }
 
 请注意，当使用 RGB 百分比时，即使当值为 0 时也要写百分比符号。但是在其他的情况下就不需要这么做了。比如说，当尺寸为 0 像素时，0 之后不需要使用 px 单位，因为 0 就是 0，无论单位是什么。
 
-### 记得写引号
+#### 记得写引号
 
 **提示：**如果值为若干单词，则要给值加引号：
 
@@ -113,7 +115,7 @@ p { color: rgb(100%,0%,0%); }
 p {font-family: "sans serif";}
 ```
 
-### 多重声明：
+#### 多重声明：
 
 **提示：**如果要定义不止一个声明，则需要用分号将每个声明分开。下面的例子展示出如何定义一个红色文字的居中段落。最后一条规则是不需要加分号的，因为分号在英语中是一个分隔符号，不是结束符号。然而，大多数有经验的设计师会在每条声明的末尾都加上分号，这么做的好处是，当你从现有的规则中增减声明时，会尽可能地减少出错的可能性。就像这样：
 
@@ -131,7 +133,7 @@ p {
 }
 ```
 
-### 空格和大小写
+#### 空格和大小写
 
 大多数样式表包含不止一条规则，而大多数规则包含不止一个声明。多重声明和空格的使用使得样式表更容易被编辑：
 
@@ -147,9 +149,98 @@ body {
 
 是否包含空格不会影响 CSS 在浏览器的工作效果，同样，与 XHTML 不同，CSS 对大小写不敏感。不过存在一个例外：如果涉及到与 HTML 文档一起工作的话，class 和 id 名称对大小写是敏感的。
 
-## CSS 高级语法
+### 创建 CSS
 
-### 选择器的分组
+#### 如何插入样式表
+
+**当读到一个样式表时，浏览器会根据它来格式化 HTML 文档。插入样式表的方法有三种：**
+
+#### 外部样式表
+
+当样式需要应用于很多页面时，外部样式表将是理想的选择。在使用外部样式表的情况下，你可以通过改变一个文件来改变整个站点的外观。每个页面使用 `<link> `标签链接到样式表。`<link>` 标签在（文档的）头部：
+
+```html
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css" />
+</head>
+```
+
+浏览器会从文件 mystyle.css 中读到样式声明，并根据它来格式文档。
+
+外部样式表可以在任何文本编辑器中进行编辑。文件不能包含任何的 html 标签。样式表应该以 .css 扩展名进行保存。下面是一个样式表文件的例子：
+
+```css
+hr {color: sienna;}
+p {margin-left: 20px;}
+body {background-image: url("images/back40.gif");}
+```
+
+不要在属性值与单位之间留有空格。假如你使用 “margin-left: 20 px” 而不是 “margin-left: 20px” ，它仅在 IE 6 中有效，但是在 Mozilla/Firefox 或 Netscape 中却无法正常工作。
+
+#### 内部样式表
+
+当单个文档需要特殊的样式时，就应该使用内部样式表。你可以使用 `<style>` 标签在文档头部定义内部样式表，就像这样:
+
+```html
+<head>
+<style type="text/css">
+  hr {color: sienna;}
+  p {margin-left: 20px;}
+  body {background-image: url("images/back40.gif");}
+</style>
+</head>
+```
+
+#### 内联样式
+
+由于要将表现和内容混杂在一起，内联样式会损失掉样式表的许多优势。请慎用这种方法，例如当样式仅需要在一个元素上应用一次时。
+
+要使用内联样式，你需要在相关的标签内使用样式（style）属性。Style 属性可以包含任何 CSS 属性。本例展示如何改变段落的颜色和左外边距：
+
+```html
+<p style="color: sienna; margin-left: 20px">
+This is a paragraph
+</p>
+```
+
+#### 多重样式
+
+如果某些属性在不同的样式表中被同样的选择器定义，那么属性值将从更具体的样式表中被继承过来。
+
+例如，外部样式表拥有针对 h3 选择器的三个属性：
+
+```css
+h3 {
+  color: red;
+  text-align: left;
+  font-size: 8pt;
+  }
+```
+
+而内部样式表拥有针对 h3 选择器的两个属性：
+
+```css
+h3 {
+  text-align: right; 
+  font-size: 20pt;
+  }
+```
+
+假如拥有内部样式表的这个页面同时与外部样式表链接，那么 h3 得到的样式是：
+
+```css
+color: red; 
+text-align: right; 
+font-size: 20pt;
+```
+
+即颜色属性将被继承于外部样式表，而文字排列（text-alignment）和字体尺寸（font-size）会被内部样式表中的规则取代。
+
+
+
+### CSS 高级语法
+
+#### 选择器的分组
 
 你可以对选择器进行分组，这样，被分组的选择器就可以分享相同的声明。用逗号将需要分组的选择器分开。在下面的例子中，我们对所有的标题元素进行了分组。所有的标题元素都是绿色的。
 
@@ -159,7 +250,7 @@ h1,h2,h3,h4,h5,h6 {
   }
 ```
 
-### 继承及其问题
+#### 继承及其问题
 
 根据 CSS，子元素从父元素继承属性。但是它并不总是按此方式工作。看看下面这条规则：
 
@@ -175,7 +266,7 @@ body {
 
 但是在那个浏览器大战的血腥年代里，这种情况就未必会发生，那时候对标准的支持并不是企业的优先选择。比方说，Netscape 4 就不支持继承，它不仅忽略继承，而且也忽略应用于 body 元素的规则。IE/Windows 直到 IE6 还存在相关的问题，在表格内的字体样式会被忽略。我们又该如何是好呢？
 
-### 友善地对待Netscape 4
+#### 友善地对待Netscape 4
 
 幸运地是，你可以通过使用我们称为 "Be Kind to Netscape 4" 的冗余法则来处理旧式浏览器无法理解继承的问题。
 
@@ -191,7 +282,7 @@ p, td, ul, ol, li, dl, dt, dd  {
 
 4.0 浏览器无法理解继承，不过他们可以理解组选择器。这么做虽然会浪费一些用户的带宽，但是如果需要对 Netscape 4 用户进行支持，就不得不这么做。
 
-### 继承是一个诅咒吗？
+#### 继承是一个诅咒吗？
 
 如果你不希望 "Verdana, sans-serif" 字体被所有的子元素继承，又该怎么做呢？比方说，你希望段落的字体是 Times。没问题。创建一个针对 p 的特殊规则，这样它就会摆脱父元素的规则：
 
@@ -209,9 +300,11 @@ p  {
      }
 ```
 
-## CSS 派生选择器
+## CSS 选择器
 
-### 派生选择器
+### CSS 派生选择器
+
+#### 派生选择器
 
 **通过依据元素在其位置的上下文关系来定义样式，你可以使标记更加简洁。**
 
@@ -265,9 +358,9 @@ h2 strong {
 <h2>The strongly emphasized word in this subhead is<strong>blue</strong>.</h2>
 ```
 
-## CSS id 选择器
+### CSS id 选择器
 
-### id 选择器
+#### id 选择器
 
 **id 选择器可以为标有特定 id 的 HTML 元素指定特定的样式。**
 
@@ -289,7 +382,7 @@ h2 strong {
 
 **注意：**id 属性只能在每个 HTML 文档中出现一次。想知道原因吗，请参阅 [XHTML:网站重构](https://www.w3school.com.cn/xhtml/xhtml_structural_01.asp)。
 
-### id 选择器和派生选择器
+#### id 选择器和派生选择器
 
 **在现代布局中，id 选择器常常用于建立派生选择器。**
 
@@ -303,7 +396,7 @@ h2 strong {
 
 上面的样式只会应用于出现在 id 是 sidebar 的元素内的段落。这个元素很可能是 div 或者是表格单元，尽管它也可能是一个表格或者其他块级元素。它甚至可以是一个内联元素，比如` <em>` `</em>` 或者` <span>` `</span>`，不过这样的用法是非法的，因为不可以在内联元素 `<span>` 中嵌入` <p>` （如果你忘记了原因，请参阅 [XHTML:网站重构](https://www.w3school.com.cn/xhtml/xhtml_structural_01.asp)）。
 
-#### 一个选择器，多种用法
+##### 一个选择器，多种用法
 
 **即使被标注为 sidebar 的元素只能在文档中出现一次，这个 id 选择器作为派生选择器也可以被使用很多次：**
 
@@ -326,7 +419,7 @@ h2 strong {
 
 在这里，与页面中的其他 p 元素明显不同的是，sidebar 内的 p 元素得到了特殊的处理，同时，与页面中其他所有 h2 元素明显不同的是，sidebar 中的 h2 元素也得到了不同的特殊处理。
 
-### 单独的选择器
+#### 单独的选择器
 
 **id 选择器即使不被用来创建派生选择器，它也可以独立发挥作用：**
 
@@ -346,7 +439,7 @@ div #sidebar {
 }
 ```
 
-### CSS 类选择器
+#### CSS 类选择器
 
 **在 CSS 中，类选择器以一个点号显示：**
 
@@ -398,102 +491,16 @@ td.fancy {
 
 你可以将类 fancy 分配给任何一个表格元素任意多的次数。那些以 fancy 标注的单元格都会是带有灰色背景的橙色。那些没有被分配名为 fancy 的类的单元格不会受这条规则的影响。还有一点值得注意，class 为 fancy 的段落也不会是带有灰色背景的橙色，当然，任何其他被标注为 fancy 的元素也不会受这条规则的影响。这都是由于我们书写这条规则的方式，这个效果被限制于被标注为 fancy 的表格单元（即使用 td 元素来选择 fancy 类）。
 
-## 创建 CSS
 
-### 如何插入样式表
+## CSS样式
 
-**当读到一个样式表时，浏览器会根据它来格式化 HTML 文档。插入样式表的方法有三种：**
-
-### 外部样式表
-
-当样式需要应用于很多页面时，外部样式表将是理想的选择。在使用外部样式表的情况下，你可以通过改变一个文件来改变整个站点的外观。每个页面使用 `<link> `标签链接到样式表。`<link>` 标签在（文档的）头部：
-
-```html
-<head>
-<link rel="stylesheet" type="text/css" href="mystyle.css" />
-</head>
-```
-
-浏览器会从文件 mystyle.css 中读到样式声明，并根据它来格式文档。
-
-外部样式表可以在任何文本编辑器中进行编辑。文件不能包含任何的 html 标签。样式表应该以 .css 扩展名进行保存。下面是一个样式表文件的例子：
-
-```css
-hr {color: sienna;}
-p {margin-left: 20px;}
-body {background-image: url("images/back40.gif");}
-```
-
-不要在属性值与单位之间留有空格。假如你使用 “margin-left: 20 px” 而不是 “margin-left: 20px” ，它仅在 IE 6 中有效，但是在 Mozilla/Firefox 或 Netscape 中却无法正常工作。
-
-### 内部样式表
-
-当单个文档需要特殊的样式时，就应该使用内部样式表。你可以使用 `<style>` 标签在文档头部定义内部样式表，就像这样:
-
-```html
-<head>
-<style type="text/css">
-  hr {color: sienna;}
-  p {margin-left: 20px;}
-  body {background-image: url("images/back40.gif");}
-</style>
-</head>
-```
-
-### 内联样式
-
-由于要将表现和内容混杂在一起，内联样式会损失掉样式表的许多优势。请慎用这种方法，例如当样式仅需要在一个元素上应用一次时。
-
-要使用内联样式，你需要在相关的标签内使用样式（style）属性。Style 属性可以包含任何 CSS 属性。本例展示如何改变段落的颜色和左外边距：
-
-```html
-<p style="color: sienna; margin-left: 20px">
-This is a paragraph
-</p>
-```
-
-### 多重样式
-
-如果某些属性在不同的样式表中被同样的选择器定义，那么属性值将从更具体的样式表中被继承过来。
-
-例如，外部样式表拥有针对 h3 选择器的三个属性：
-
-```css
-h3 {
-  color: red;
-  text-align: left;
-  font-size: 8pt;
-  }
-```
-
-而内部样式表拥有针对 h3 选择器的两个属性：
-
-```css
-h3 {
-  text-align: right; 
-  font-size: 20pt;
-  }
-```
-
-假如拥有内部样式表的这个页面同时与外部样式表链接，那么 h3 得到的样式是：
-
-```css
-color: red; 
-text-align: right; 
-font-size: 20pt;
-```
-
-即颜色属性将被继承于外部样式表，而文字排列（text-alignment）和字体尺寸（font-size）会被内部样式表中的规则取代。
-
-# CSS样式
-
-## CSS 背景
+### CSS 背景
 
 **CSS 允许应用纯色作为背景，也允许使用背景图像创建相当复杂的效果。**
 
 **CSS 在这方面的能力远远在 HTML 之上。**
 
-### 背景色
+#### 背景色
 
 可以使用 [background-color 属性](https://www.w3school.com.cn/cssref/pr_background-color.asp)为元素设置背景色。这个属性接受任何合法的颜色值。
 
@@ -513,7 +520,7 @@ p {background-color: gray; padding: 20px;}
 
 background-color 不能继承，其默认值是 transparent。transparent 有“透明”之意。也就是说，如果一个元素没有指定背景色，那么背景就是透明的，这样其祖先元素的背景才能可见。
 
-### 背景图像
+#### 背景图像
 
 要把图像放入背景，需要使用 [background-image 属性](https://www.w3school.com.cn/cssref/pr_background-image.asp)。background-image 属性的默认值是 none，表示背景上没有放置任何图像。
 
@@ -541,7 +548,7 @@ a.radio {background-image: url(/i/eg_bg_07.gif);}
 
 另外还要补充一点，background-image 也不能继承。事实上，所有背景属性都不能继承。
 
-### 背景重复
+#### 背景重复
 
 如果需要在页面上对背景图像进行平铺，可以使用 [background-repeat 属性](https://www.w3school.com.cn/cssref/pr_background-repeat.asp)。
 
@@ -557,7 +564,7 @@ body
   }
 ```
 
-### 背景定位
+#### 背景定位
 
 可以利用 [background-position 属性](https://www.w3school.com.cn/cssref/pr_background-position.asp)改变图像在背景中的位置。
 
@@ -574,7 +581,7 @@ body
 
 为 background-position 属性提供值有很多方法。首先，可以使用一些关键字：top、bottom、left、right 和 center。通常，这些关键字会成对出现，不过也不总是这样。还可以使用长度值，如 100px 或 5cm，最后也可以使用百分数值。不同类型的值对于背景图像的放置稍有差异。
 
-### 关键字
+#### 关键字
 
 图像放置关键字最容易理解，其作用如其名称所表明的。例如，top right 使图像放置在元素内边距区的右上角。
 
@@ -603,7 +610,7 @@ p
 | right      | right center 或 center right   |
 | left       | left center 或 center left     |
 
-### 百分数值
+#### 百分数值
 
 百分数值的表现方式更为复杂。假设你希望用百分数值将图像在其元素中居中，这很容易：
 
@@ -635,7 +642,7 @@ body
 
 background-position 的默认值是 0% 0%，在功能上相当于 top left。这就解释了背景图像为什么总是从元素内边距区的左上角开始平铺，除非您设置了不同的位置值。
 
-### 长度值
+#### 长度值
 
 长度值解释的是元素内边距区左上角的偏移。偏移点是图像的左上角。
 
@@ -652,7 +659,7 @@ body
 
 注意，这一点与百分数值不同，因为偏移只是从一个左上角到另一个左上角。也就是说，图像的左上角与 background-position 声明中的指定的点对齐。
 
-### 背景关联
+#### 背景关联
 
 如果文档比较长，那么当文档向下滚动时，背景图像也会随之滚动。当文档滚动到超过图像的位置时，图像就会消失。
 
@@ -667,7 +674,7 @@ body
   }
 ```
 
-### CSS 背景属性
+#### CSS 背景属性
 
 | 属性                                                         | 描述                                         |
 | :----------------------------------------------------------- | :------------------------------------------- |
@@ -678,7 +685,7 @@ body
 | [background-position](https://www.w3school.com.cn/cssref/pr_background-position.asp) | 设置背景图像的起始位置。                     |
 | [background-repeat](https://www.w3school.com.cn/cssref/pr_background-repeat.asp) | 设置背景图像是否及如何重复。                 |
 
-### CSS 背景实例
+#### CSS 背景实例
 
 - [设置背景颜色](https://www.w3school.com.cn/tiy/t.asp?f=csse_background-color)
 
@@ -732,13 +739,13 @@ body
 
   本例演示如何使用简写属性来将所有背景属性设置在一个声明之中。
 
-## [CSS 文本](https://www.w3school.com.cn/css/css_text.asp)
+### [CSS 文本](https://www.w3school.com.cn/css/css_text.asp)
 
 **CSS 文本属性可定义文本的外观。**
 
 **通过文本属性，您可以改变文本的颜色、字符间距，对齐文本，装饰文本，对文本进行缩进，等等。**
 
-## CSS 文本属性
+### CSS 文本属性
 
 | 属性                                                         | 描述                                                        |
 | :----------------------------------------------------------- | :---------------------------------------------------------- |
@@ -755,11 +762,11 @@ body
 | [white-space](https://www.w3school.com.cn/cssref/pr_text_white-space.asp) | 设置元素中空白的处理方式。                                  |
 | [word-spacing](https://www.w3school.com.cn/cssref/pr_text_word-spacing.asp) | 设置字间距。                                                |
 
-## [CSS 字体](https://www.w3school.com.cn/css/css_font.asp)
+### [CSS 字体](https://www.w3school.com.cn/css/css_font.asp)
 
 **CSS 字体属性定义文本的字体系列、大小、加粗、风格（如斜体）和变形（如小型大写字母）。**
 
-### CSS 字体属性
+#### CSS 字体属性
 
 | 属性                                                         | 描述                                                         |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
@@ -772,11 +779,11 @@ body
 | [font-variant](https://www.w3school.com.cn/cssref/pr_font_font-variant.asp) | 以小型大写字体或者正常字体显示文本。                         |
 | [font-weight](https://www.w3school.com.cn/cssref/pr_font_weight.asp) | 设置字体的粗细。                                             |
 
-## [CSS 链接](https://www.w3school.com.cn/css/css_link.asp)
+### [CSS 链接](https://www.w3school.com.cn/css/css_link.asp)
 
 **我们能够以不同的方法为链接设置样式。**
 
-### 设置链接的样式
+#### 设置链接的样式
 
 能够设置链接样式的 CSS 属性有很多种（例如 color, font-family, background 等等）。
 
@@ -801,13 +808,13 @@ a:active {color:#0000FF;}	/* 正在被点击的链接 */
 - a:hover 必须位于 a:link 和 a:visited 之后
 - a:active 必须位于 a:hover 之后
 
-### 常见的链接样式
+#### 常见的链接样式
 
 在上面的例子中，链接根据其状态改变颜色。
 
 让我们看看其他几种常见的设置链接样式的方法：
 
-#### 文本修饰
+##### 文本修饰
 
 text-decoration 属性大多用于去掉链接中的下划线：
 
@@ -818,7 +825,7 @@ a:hover {text-decoration:underline;}
 a:active {text-decoration:underline;}
 ```
 
-### 背景色
+#### 背景色
 
 background-color 属性规定链接的背景色：
 
@@ -829,11 +836,11 @@ a:hover {background-color:#FF704D;}
 a:active {background-color:#FF704D;}
 ```
 
-## [CSS 列表](https://www.w3school.com.cn/css/css_list.asp)
+### [CSS 列表](https://www.w3school.com.cn/css/css_list.asp)
 
 **CSS 列表属性允许你放置、改变列表项标志，或者将图像作为列表项标志。**
 
-### CSS 列表属性
+#### CSS 列表属性
 
 | 属性                                                         | 描述                                                 |
 | :----------------------------------------------------------- | :--------------------------------------------------- |
@@ -842,11 +849,11 @@ a:active {background-color:#FF704D;}
 | [list-style-position](https://www.w3school.com.cn/cssref/pr_list-style-position.asp) | 设置列表中列表项标志的位置。                         |
 | [list-style-type](https://www.w3school.com.cn/cssref/pr_list-style-type.asp) | 设置列表项标志的类型。                               |
 
-## [CSS 表格](https://www.w3school.com.cn/css/css_table.asp)
+### [CSS 表格](https://www.w3school.com.cn/css/css_table.asp)
 
 **CSS 表格属性可以帮助您极大地改善表格的外观。**
 
-### CSS 表格属性
+#### CSS 表格属性
 
 | 属性                                                         | 描述                                 |
 | :----------------------------------------------------------- | :----------------------------------- |
@@ -856,13 +863,13 @@ a:active {background-color:#FF704D;}
 | [empty-cells](https://www.w3school.com.cn/cssref/pr_tab_empty-cells.asp) | 设置是否显示表格中的空单元格。       |
 | [table-layout](https://www.w3school.com.cn/cssref/pr_tab_table-layout.asp) | 设置显示单元、行和列的算法。         |
 
-## CSS 轮廓
+### CSS 轮廓
 
 **轮廓（outline）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。**
 
 **CSS outline 属性规定元素轮廓的样式、颜色和宽度。**
 
-### CSS 边框属性
+#### CSS 边框属性
 
 "CSS" 列中的数字指示哪个 CSS 版本定义了该属性。
 
@@ -873,9 +880,9 @@ a:active {background-color:#FF704D;}
 | [outline-style](https://www.w3school.com.cn/cssref/pr_outline-style.asp) | 设置轮廓的样式。                 | 2    |
 | [outline-width](https://www.w3school.com.cn/cssref/pr_outline-width.asp) | 设置轮廓的宽度。                 | 2    |
 
-# CSS 框模型
+## CSS 盒子模型
 
-## CSS 框模型概述
+### CSS 盒子模型概述
 
 **CSS 框模型 (Box Model) 规定了元素框处理元素内容、内边距、边框 和 外边距 的方式。**
 
@@ -885,11 +892,260 @@ a:active {background-color:#FF704D;}
 
 内边距、边框和外边距都是可选的，默认值是零。但是，许多元素将由用户代理样式表设置外边距和内边距。可以通过将元素的 margin 和 padding 设置为零来覆盖这些浏览器样式。这可以分别进行，也可以使用通用选择器对所有元素进行设置：
 
+## CSS 浮动布局
+
+
+
+## CSS 定位布局
+
+
+
+## CSS 弹性布局
+
+{% folding 参考文章 %}
+
+{% link Flex布局语法教程——阮一峰, https://www.runoob.com/w3cnote/flex-grammar.html, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/%E7%BD%91%E7%AB%99.svg %}
+{% link flex 布局的基本概念——MDN教程, https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox, https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-a@main/img/%E7%BD%91%E7%AB%99.svg %}
+
+{% endfolding %}
+
+### Flex 布局是什么
+
+Flex 是 `Flexible Box` 的缩写，意为“弹性布局”，用来为盒状模型提供最大的灵活性。任何一个容器都可以指定为 Flex 布局。
+
+```css
+.box{
+  display: flex;
+}
+```
+
+行内元素也可以使用 Flex 布局。
+
+```css
+.box{
+  display: inline-flex;
+}
+```
+
+Webkit 内核的浏览器，必须加上 `-webkit` 前缀。
+
+```css
+.box{
+  display: -webkit-flex; /* Safari */
+  display: flex;
+}
+```
+
+注意，设为 Flex 布局以后，子元素的 `float`、`clear` 和 `vertical-align` 属性将失效。
+
+### 基本概念
+
+采用 Flex 布局的元素，称为 Flex 容器（flex container），简称“容器”。
+
+它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称“项目”。
+
+![Flex 布局](https://www.runoob.com/wp-content/uploads/2015/07/3791e575c48b3698be6a94ae1dbff79d.png)
+
+容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做 main start，结束位置叫做 main end；交叉轴的开始位置叫做 cross start，结束位置叫做 cross end。
+
+项目默认沿主轴排列。单个项目占据的主轴空间叫做 main size，占据的交叉轴空间叫做 cross size。
+
+### 容器属性
+
+以下 6 个属性设置在容器上：
+
++ [flex-direction](#flex-direction属性)
++ [flex-wrap](#flex-wrap属性)
++ [flex-flow](#flex-flow属性)
++ [justify-content](#justify-content属性)
++ [align-items](#align-items属性)
++ [align-content](#align-content属性)
+
+#### `flex-direction` 属性
+
+`flex-direction` 属性决定主轴的方向（即项目的排列方向）。它可能有 4 个值：
+
++ `column-reverse`：主轴为垂直方向，起点在下沿。
++ `column`：主轴为垂直方向，起点在上沿。
++ `row`（默认值）：主轴为水平方向，起点在左端。
++ `row-reverse`：主轴为水平方向，起点在右端。
+
+![flex-direction 属性](https://www.runoob.com/wp-content/uploads/2015/07/0cbe5f8268121114e87d0546e53cda6e.png)
+
+```css
+.box {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+```
+
+#### `flex-wrap`属性
+
+默认情况下，项目都排在一条线（又称“轴线”）上。`flex-wrap` 属性定义，如果一条轴线排不下，如何换行。
+
+![](https://www.runoob.com/wp-content/uploads/2015/07/903d5b7df55779c03f2687a7d4d6bcea.png)
+
+它可能取三个值：
+
++ `nowrap`（默认）：不换行
++ `wrap`：换行，第一行在上方
++ `wrap-reverse`：换行，第一行在下方
+
+![nowrap](https://www.runoob.com/wp-content/uploads/2015/07/9da1f23965756568b4c6ea7124db7b9a.png)
+![wrap](https://www.runoob.com/wp-content/uploads/2015/07/3c6b3c8b8fe5e26bca6fb57538cf72d9.jpg)
+![wrap-reverse](https://www.runoob.com/wp-content/uploads/2015/07/fb4cf2bab8b6b744b64f6d7a99cd577c.jpg)
+
+#### `flex-flow`属性
+
+`flex-flow` 属性是 `flex-direction` 属性和 `flex-wrap` 属性的简写形式，默认值为 `row nowrap`。
+
+#### `justify-content`属性
+
+`justify-content` 属性定义了项目在主轴上的对齐方式。它可能取 5 个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。
+
++ `flex-start`（默认值）：左对齐
++ `flex-end`：右对齐
++ `center`： 居中
++ `space-between`：两端对齐，项目之间的间隔都相等。
++ `space-around`：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+
+![justify-content 属性](https://www.runoob.com/wp-content/uploads/2015/07/c55dfe8e3422458b50e985552ef13ba5.png)
+
+#### `align-items`属性
+
+`align-items` 属性定义项目在交叉轴上如何对齐。它可能取 5 个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下：
+
++ `flex-start`：交叉轴的起点对齐。
++ `flex-end`：交叉轴的终点对齐。
++ `center`：交叉轴的中点对齐。
++ `baseline`: 项目的第一行文字的基线对齐。
++ `stretch`（默认值）：如果项目未设置高度或设为 `auto`，将占满整个容器的高度。
+
+![align-items 属性](https://www.runoob.com/wp-content/uploads/2015/07/2b0c39c7e7a80d5a784c8c2ca63cde17.png)
+
+#### `align-content`属性
+
+`align-content` 属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。该属性可能取 6 个值：
+
++ `flex-start`：与交叉轴的起点对齐。
++ `flex-end`：与交叉轴的终点对齐。
++ `center`：与交叉轴的中点对齐。
++ `space-between`：与交叉轴两端对齐，轴线之间的间隔平均分布。
++ `space-around`：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。
++ `stretch`（默认值）：轴线占满整个交叉轴。
+
+![align-content属性](https://www.runoob.com/wp-content/uploads/2015/07/f10918ccb8a13247c9d47715a2bd2c33.png)
+
+### 项目属性
+
+以下 6 个属性设置在项目上：
+
++ [order](#order属性)
++ [flex-grow](#flex-grow属性)
++ [flex-shrink](#flex-shrink属性)
++ [flex-basis](#flex-basis属性)
++ [flex](#flex-basis属性)
++ [align-self](#flex-basis属性)
+
+#### `order`属性
+
+`order` 属性定义项目的排列顺序。数值越小，排列越靠前，默认为 0。
+
+```css
+.item {
+  order: <integer>;
+}
+```
+
+![order 属性](https://www.runoob.com/wp-content/uploads/2015/07/59e399c72daafcfcc20ede36bf32f266.png)
+
+#### `flex-grow`属性
+
+`flex-grow` 属性定义项目的放大比例，默认为 0，即如果存在剩余空间，也不放大。
+
+```css
+.item {
+  flex-grow: <number>; /* default 0 */
+}
+```
+
+![flex-grow 属性](https://www.runoob.com/wp-content/uploads/2015/07/f41c08bb35962ed79e7686f735d6cd78.png)
+
+如果所有项目的 `flex-grow` 属性都为 1，则它们将等分剩余空间（如果有的话）。如果一个项目的 `flex-grow` 属性为 2，其他项目都为 1，则前者占据的剩余空间将比其他项多一倍。
+
+
+#### `flex-shrink`属性
+
+`flex-shrink` 属性定义了项目的缩小比例，默认为 1，即如果空间不足，该项目将缩小。
+
+```css
+.item {
+  flex-shrink: <number>; /* default 1 */
+}
+```
+
+![flex-shrink 属性](https://www.runoob.com/wp-content/uploads/2015/07/240d3e960043a729bb3ff5e34987904f.jpg)
+
+如果所有项目的 `flex-shrink` 属性都为 1，当空间不足时，都将等比例缩小。如果一个项目的 `flex-shrink` 属性为 0，其他项目都为 1，则空间不足时，前者不缩小。负值对该属性无效。
+
+#### `flex-basis`属性
+
+`flex-basis` 属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为 `auto`，即项目的本来大小。
+
+```css
+.item {
+  flex-basis: <length> | auto; /* default auto */
+}
+```
+
+它可以设为跟 `width` 或 `height` 属性一样的值（比如 350 px），则项目将占据固定空间。
+
+#### `flex`属性
+
+`flex` 属性是 `flex-grow`，`flex-shrink` 和 `flex-basis` 的简写，默认值为 `0 1 auto`。后两个属性可选。
+
+```css
+.item {
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+}
+```
+
+该属性有两个快捷值：`auto (1 1 auto)` 和 `none (0 0 auto)`。
+
+建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。
+
+#### `align-self`属性
+
+`align-self` 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 `align-items` 属性。默认值为 `auto`，表示继承父元素的 `align-items` 属性，如果没有父元素，则等同于 `stretch`。
+
+```css
+.item {
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+```
+
+该属性可能取 6 个值，除了 `auto`，其他都与 `align-items` 属性完全一致。
+
+![align-self 属性](https://www.runoob.com/wp-content/uploads/2015/07/55b19171b8b6b9487d717bf2ecbba6de.png)
+
+
+
+## CSS 栅格系统
+
+
+
+## CSS 变形动画与过渡
+
+
+
+## CSS 帧动画
+
+
+
+## CSS 媒体查询
 
 
 
 
-## 背景与边框
 
 
 

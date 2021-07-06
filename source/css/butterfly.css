@@ -816,13 +816,13 @@ audio {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: rgba(73, 177, 245, .2);
+    background-color: rgba(73, 176, 245, 0.082);
     border-radius: 2em
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #395ca3;
-    background-image: -webkit-linear-gradient(45deg, hsla(0, 0%, 100%, .4) 25%, transparent 0, transparent 50%, hsla(0, 0%, 100%, .4) 0, hsla(0, 0%, 100%, .4) 75%, transparent 0, transparent);
+    background-color: #395ca3b9;
+    /* background-image: -webkit-linear-gradient(45deg, hsla(0, 0%, 100%, .4) 25%, transparent 0, transparent 50%, hsla(0, 0%, 100%, .4) 0, hsla(0, 0%, 100%, .4) 75%, transparent 0, transparent); */
     border-radius: 2em
 }
 

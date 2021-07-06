@@ -131,6 +131,10 @@ sh middleware.sh
 # 以后打算关闭的话，执行 ./kernShutdown.sh
 ```
 
+![image](https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-e@master/image.h5vlenfzi1c.png)
+
+![image](https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-e@master/image.68hxw53h1tk0.png)
+
 在部署完中间件后，我们需要进行测试中间件安装是否成功。
 
 ### MySQL
@@ -160,11 +164,9 @@ Nacos 后台配置页面，默认账号和密码：nacos  nacos
 
 RabbitMQ是消息队列，我们可以访问其图形化界面
 
-```
-# 图形化地址
-IP地址:15672
-# 默认账号和密码为：admin  mogu2018
-```
+访问下面 URL 进行测试 [http://rabbitmq:15672](http://rabbitmq:15672)
+
+默认账号和密码为：admin  mogu2018
 
 ![测试rabbitmq_mugo连接](https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-b@master/img/测试rabbitmq_mugo连接.png)
 
@@ -195,6 +197,13 @@ Zipkin是一个开源的分布式的链路追踪系统，每个微服务都会�
 ```
 mogu_admin、mogu_web、mogu_sms、mogu_picture、mogu_gateway
 ```
+
+可能出现的问题：
+![image](https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-e@master/image.4frzk3syxcm0.png)
+
+解决方法：
+![image](https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-e@master/image.2fswo2pao134.png)
+
 
 等服务器都启动完成后，下面我们验证一下后台是否正常启动，回到我们的 Nacos 管理界面,如果我们看到下面五个服务都注册到 Nacos 中，那说明启动成功
 

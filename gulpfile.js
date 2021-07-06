@@ -6,7 +6,7 @@ var uglify = require('gulp-uglify')
 var babel = require('gulp-babel')
 // 压缩js
 gulp.task('compress', () =>
-  gulp.src(['./public/**/*.js', '!./public/**/*.min.js'])
+  gulp.src(['./public/**/*.js', '!./public/**/*.min.js','!./public/CodePen/**/*.js'])
     .pipe(babel({
       presets: ['@babel/preset-env']
     }))
@@ -17,7 +17,7 @@ gulp.task('compress', () =>
 )
 // 压缩css
 gulp.task('minify-css', () => {
-    return gulp.src(['./public/**/*.css'])
+    return gulp.src(['./public/**/*.css','!./public/CodePen/**/*.css'])
         .pipe(cleanCSS({
             compatibility: 'ie11'
         }))
@@ -25,7 +25,7 @@ gulp.task('minify-css', () => {
 });
 // 压缩html
 gulp.task('minify-html', () => {
-    return gulp.src('./public/**/*.html')
+    return gulp.src('./public/**/*.html','!./public/CodePen/**/*.html')
         .pipe(htmlclean())
         .pipe(htmlmin({
             removeComments: true, 	  // 清除 html 注释

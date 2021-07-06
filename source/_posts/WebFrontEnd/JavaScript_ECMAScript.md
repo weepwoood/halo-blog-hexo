@@ -1,5 +1,5 @@
 ---
-title: JavaScript ECMAScript
+title: JavaScript之ECMAScript
 date: 2019-08-09 11:05:50
 tags:
 - JavaScript
@@ -7,10 +7,9 @@ categories:
 - Web
 ---
 
-[JavaScript](https://www.liaoxuefeng.com/wiki/1022910821149312)核心（ECMAScript），参考书籍《JavaScript高级程序设计》第三版
+[JavaScript](https://www.liaoxuefeng.com/wiki/1022910821149312)核心（ECMAScript），参考书籍《JavaScript高级程序设计》第三版、第四版
 
 ---
-
 
 ## 基本概念
 
@@ -130,6 +129,32 @@ console.log(message) // hello
 ```javascript
 var message = "hello",found = false;
 ```
+
+## 表达式和运算符
+
+### 展开语法
+
+[展开语法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)（Spread syntax)，可以在函数调用/数组构造时，将数组表达式或者 string 在语法层面展开；还可以在构造字面量对象时，将对象表达式按key-value 的方式展开。例如：
+
+```javascript
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers));
+// expected output: 6
+
+console.log(sum.apply(null, numbers));
+// expected output: 6
+```
+
+####  在函数调用时使用展开语法
+
+TODO
+
+
 
 ## 数据类型
 
@@ -270,7 +295,10 @@ alert(s); // s仍然为'Test'
 
 JavaScript为字符串提供了一些常用方法，注意，调用这些方法本身不会改变原有字符串的内容，而是返回一个新字符串：
 
-##### toUpperCase
++ toUpperCase
++ toLowerCase
++ indexOf
++ substring
 
 `toUpperCase()`把一个字符串全部变为大写：
 
@@ -278,8 +306,6 @@ JavaScript为字符串提供了一些常用方法，注意，调用这些方法�
 var s = 'Hello';
 s.toUpperCase(); // 返回'HELLO'
 ```
-
-##### toLowerCase
 
 `toLowerCase()`把一个字符串全部变为小写：
 
@@ -289,8 +315,6 @@ var lower = s.toLowerCase(); // 返回'hello'并赋值给变量lower
 lower; // 'hello'
 ```
 
-##### indexOf
-
 `indexOf()`会搜索指定字符串出现的位置：
 
 ```javascript
@@ -298,8 +322,6 @@ var s = 'hello, world';
 s.indexOf('world'); // 返回7
 s.indexOf('World'); // 没有找到指定的子串，返回-1
 ```
-
-##### substring
 
 `substring()`返回指定索引区间的子串：
 
@@ -493,7 +515,7 @@ arr.indexOf('30'); // 元素'30'的索引为2
 
 #### slice
 
-`slice()`就是对应String的`substring()`版本，它截取`Array`的部分元素，然后返回一个新的`Array`：
+`slice()` 就是对应 String 的 `substring()` 版本，它截取`Array`的部分元素，然后返回一个新的`Array`：
 
 ```javascript
 var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
@@ -512,9 +534,9 @@ aCopy; // ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 aCopy === arr; // false
 ```
 
-#### push和pop
+#### push 和 pop
 
-`push()`向`Array`的末尾添加若干元素，`pop()`则把`Array`的最后一个元素删除掉：
+`push()` 向`Array`的末尾添加若干元素，`pop()`则把`Array`的最后一个元素删除掉：
 
 ```javascript
 var arr = [1, 2];

@@ -338,7 +338,7 @@ public class UserController {
 - 因为已经使用了 Swagger 的注解，所以类和方法上的注释，一般可以删除了，除非有特殊诉求。
 - 其中涉及到的 POJO 类，有 `UserAddDTO`、`UserUpdateDTO`、`UserVO` 。
 
-执行 Application 启动项目。然后浏览器访问 [http://localhost:8080//swagger-ui.html](http://localhost:8080//swagger-ui.html) 地址，就可以看到 Swagger 生成的 API 接口文档。如下图所示：
+执行 Application 启动项目。然后浏览器访问 [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) 地址，就可以看到 Swagger 生成的 API 接口文档。如下图所示：
 
 ![Swagger示例](https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-img-b@master/img/Swagger示例.png)
 
@@ -1129,5 +1129,4 @@ public class User {
 ## 整合原生的 Mybatis
 
 使用了 mybatis 官方提供的脚手架 `mybatis-spring-boot-starter `可以很容易的和 Spring Boot 整合。
-
 
