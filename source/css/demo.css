@@ -9,6 +9,16 @@
     /* box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1); */
 }
 
+
+.demo-red {
+    border: dashed 2px rgb(255, 92, 92);
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1.2rem;
+    /* box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1); */
+}
+
 .demo-getElementById {
     display: grid;
     grid-template-rows: repeat(2, 1fr);

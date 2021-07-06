@@ -4,16 +4,16 @@
 
 # Sitew
 title: HALO
-subtitle: 'HALO'
+subtitle: "HALO"
 description: '"CV"工程师'
 keywords:
 author: HALO
 language: zh-CN
-timezone: ''
+timezone: ""
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://halo123.top
+url: https://whl123456.top
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -37,31 +37,31 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
-  exclude: ''
+  exclude: ""
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
-future: true 
+future: true
 highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace: ''
+  tab_replace: ""
   wrap: true
   hljs: false
 prismjs:
   enable: false
   preprocess: true
   line_number: true
-  tab_replace: ''
+  tab_replace: ""
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
 
@@ -81,7 +81,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: "mtime"
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -102,7 +102,7 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
+  type: "git"
   # repo: https://halo-blog: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@github.com/halo-blog/halo-blog.github.io.git
   # repo: https://github.com/lanqilu/lanqilu.github.io.git
   repo: https://github.com/halo-blog/halo-blog.github.io.git
@@ -124,7 +124,7 @@ markdown:
     # 是否自动识别印刷格式（意思是把(c)渲染为©这样的）
     typographer: true
     # 如果typographer被设置为true，则该选项用于设置将dumb quotes（""）自动替换为smart quotes
-    quotes: '“”‘’'
+    quotes: "“”‘’"
   # 设置所需插件
   plugins:
     - markdown-it-abbr
@@ -135,7 +135,7 @@ markdown:
   # 锚点设置（因为我没有尝试相关内容，所以就不翻译相关说明了）
   anchors:
     level: 2
-    collisionSuffix: 'v'
+    collisionSuffix: "v"
     permalink: true
     permalinkClass: header-anchor
     permalinkSymbol: ""
