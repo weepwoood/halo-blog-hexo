@@ -15,8 +15,6 @@ layout: "about"
 
 同时也使用 GitPage 进行托管网站域名为 [halo-blog.github.io](https://halo-blog.github.io/)，这三个网站内容相同。
 
-> 由于评论使用 Gitalk，
-
 博客图片使用 [PicX](https://picx.xpoet.cn/#/upload) 工具上传到 GitHub 并使用 jsdelivr CDN。
 
 之后打算自己编写一套博客系统，但因为考研的关系暂时还没有完成，项目地址如下：

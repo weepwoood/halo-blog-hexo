@@ -24,6 +24,7 @@ function getTranslateVal(str) {
 mb.onmouseenter = function ({ x }) {
     intX = x
 }
+
 mb.onmousemove = function ({ x }) {
     imgs.forEach((el, i) => {
         const dm = el.dataset.moveMultiple
